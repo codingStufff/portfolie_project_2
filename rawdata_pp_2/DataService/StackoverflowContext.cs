@@ -13,6 +13,7 @@ namespace DomainModel
         public DbSet<Post> posts { get; set; }
         public DbSet<Comment> comment { get; set; }
         public DbSet<Author> author { get; set; }
+        public DbSet<User> user { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -50,6 +51,16 @@ namespace DomainModel
             builder.Entity<Author>().Property(x => x.DisplayName).HasColumnName("displayname");
             builder.Entity<Author>().Property(x => x.AuthorLocation).HasColumnName("authorlocation");
             builder.Entity<Author>().Property(x => x.CreationDate).HasColumnName("creatioondate");
+
+            // mapping users from the users table from the database
+            builder.Entity<User>().ToTable("users");
+            builder.Entity<User>().Property(x => x.Id).HasColumnName("id");
+            builder.Entity<User>().Property(x => x.UserPassword).HasColumnName("userpassword");
+            builder.Entity<User>().Property(x => x.Username).HasColumnName("username");
+            builder.Entity<User>().Property(x => x.Age).HasColumnName("age");
+            builder.Entity<User>().Property(x => x.DisplayName).HasColumnName("displayname");
+            builder.Entity<User>().Property(x => x.UserLocation).HasColumnName("userlocation");
+            builder.Entity<User>().Property(x => x.CreationDate).HasColumnName("creationdate");
         }
         public static readonly LoggerFactory MyLoggerFactory
         = new LoggerFactory(new[]
