@@ -5524,7 +5524,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
-      "sha512": "sa/cztXesLyTgCiYuef0RK2EAImnak0w2wrjCh/YBTvbn4iV2eTy0q3F8CyUkGiaYEyxUKGVTko6+7SMRBL4Gg==",
+      "sha512": "ab4+TZw3Sxqrr5TwrwVyABeQkhSxYMJXgG6yZw7T+r6Vz+hcOt+pK79o15ESG7kZvWAK9wRG7emnTIia5O6R1Q==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
       "files": [
@@ -12357,23 +12357,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sebastian\\.nuget\\packages\\": {},
+    "C:\\Users\\Devendra\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Working project portfolie 2\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
+      "projectUniqueName": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
       "projectName": "rawdata_pp_2",
-      "projectPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Working project portfolie 2\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
-      "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Working project portfolie 2\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\",
+      "projectPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
+      "packagesPath": "C:\\Users\\Devendra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Devendra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12386,8 +12386,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Working project portfolie 2\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj": {
-              "projectPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Working project portfolie 2\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj"
+            "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj": {
+              "projectPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj"
             }
           }
         }
@@ -12433,5 +12433,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\rawdata_pp_2.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
