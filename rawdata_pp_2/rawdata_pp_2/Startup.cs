@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+using rawdata_pp_2.Models;
 
 namespace rawdata_pp_2
 {
@@ -24,6 +26,7 @@ namespace rawdata_pp_2
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            MapperConfig();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -33,6 +36,12 @@ namespace rawdata_pp_2
             {
                 await context.Response.WriteAsync("Hello World!");
             });*/
+        }
+        private void MapperConfig()
+        {
+            Mapper.Initialize(cfg => {
+                cfg.CreateMap<Post, PostModel>();     
+            });
         }
     }
 }
