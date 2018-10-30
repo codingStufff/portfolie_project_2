@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 namespace DomainModel
 {
-    public class DataService
+    public class DataService: IDataService
     {
         public Post GetPostById(int id)
         {

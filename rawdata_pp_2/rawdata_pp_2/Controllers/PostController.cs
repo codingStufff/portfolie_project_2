@@ -10,6 +10,11 @@ namespace rawdata_pp_2.Controllers
     [ApiController]
     public class PostController : Controller
     {
+        IDataService _dataService;
+        public PostController(IDataService dataService)
+        {
+            _dataService = dataService;
+        }
         public IActionResult Index()
         {
             return View();
@@ -23,8 +28,8 @@ namespace rawdata_pp_2.Controllers
         [HttpGet("{id}")]
         public IActionResult GetPost(int id)
         {
-            DataService service = new DataService();
-            return Ok(service.GetPostById(id));
+           
+            return Ok(_dataService.GetPostById(id));
         }
 
     }

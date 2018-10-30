@@ -12328,11 +12328,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolio_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
+      "projectUniqueName": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
       "projectName": "rawdata_pp_2",
-      "projectPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolio_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
+      "projectPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
       "packagesPath": "C:\\Users\\Devendra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolio_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\",
+      "outputPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12351,8 +12351,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Devendra\\Documents\\rawdata\\portfolio_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj": {
-              "projectPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolio_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj"
+            "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj": {
+              "projectPath": "C:\\Users\\Devendra\\Documents\\rawdata\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj"
             }
           }
         }
