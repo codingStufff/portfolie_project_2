@@ -14,6 +14,6 @@ namespace DomainModel
         public string Title { get; set; }
         public string Tags { get; set; }
         public int AuthorId { get; set; }
-        public Comment Comments { get; set; }
+        public Comment Comment { get; set; }
     }
 }

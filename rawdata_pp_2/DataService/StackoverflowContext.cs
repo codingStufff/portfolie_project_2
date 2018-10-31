@@ -42,7 +42,7 @@ namespace DomainModel
             builder.Entity<Comment>().Property(x => x.Score).HasColumnName("score");
             builder.Entity<Comment>().Property(x => x.CommentText).HasColumnName("commenttext");
             builder.Entity<Comment>().Property(x => x.CreationDate).HasColumnName("creationdate");
-            builder.Entity<Comment>().Property(x => x.AuthorId).HasColumnName("auther_id");
+            builder.Entity<Comment>().Property(x => x.AuthorId).HasColumnName("author_id");
 
             // mapping authors from the author table from the database
             builder.Entity<Author>().ToTable("author");

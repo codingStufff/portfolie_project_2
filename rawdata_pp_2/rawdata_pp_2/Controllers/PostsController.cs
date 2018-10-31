@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using DomainModel;
+using AutoMapper;
+using rawdata_pp_2.Models;
+
+namespace rawdata_pp_2.Controllers
+{
+    [Route("api/posts/")]
+    [ApiController]
+    public class PostsController : Controller
+    {
+        private readonly IDataService _dataService;
+        public PostsController(IDataService dataService)
+        {
+            _dataService = dataService;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet("{id}", Name = nameof(GetPost))]
+        public IActionResult GetPost(int id)
+        {
+            var post = _dataService.GetPostById(id);
+            if (post == null) return NotFound();
+            var model = Mapper.Map<PostModel>(post);
+
+            model.Url = Url.Link(nameof(GetPost), new { id = post.Id });
+            //model.Category = Url.Link(nameof(CategoriesController.GetCategory), new { id = product.Category.Id });
+            return Ok(model);
+        }
+
+        [HttpGet("{tagSearch}", Name = nameof(GetPostsByTags))]
+        public IActionResult GetPostsByTags(string tagSearch)
+        {
+            var post = _dataService.GetPostsByTags(tagSearch);
+            return Ok(post);
+        }
+
+        [HttpGet("posts", Name =nameof(GetPosts))]
+        public IActionResult GetPosts(int page=0, int pageSize= 10)
+        {
+            var posts = _dataService.GetPosts(page, pageSize)
+                .Select(CreatePostList);
+
+            var numberOfItems = _dataService.GetNumberOfPosts();
+            var totalPages = CalculateTotalPages(pageSize, numberOfItems);
+
+            var result = new
+            {
+                NumberOfItems = numberOfItems,
+                NumberOfPages = totalPages,
+                First = CreateLink(page, pageSize),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
+                Last = CreateLink(totalPages - 1, pageSize),
+                Items = posts
+            };
+
+            return Ok(result);
+
+        }
+
+        private PostListModel CreatePostList(Post post)
+        {
+            var model = Mapper.Map<PostListModel>(post);
+            model.url = Url.Link(nameof(GetPost), new { id = post.Id });
+            return model;
+        }
+
+        private static int CalculateTotalPages(int pageSize, int numberOfItems)
+        {
+            return (int)Math.Ceiling((double)numberOfItems / pageSize);
+        }
+        private string CreateLink(int page, int pageSize)
+        {
+            return Url.Link(nameof(GetPosts), new { page, pageSize });
+        }
+
+        private string CreateLinkToPrevPage(int page, int pageSize)
+        {
+            return page == 0 ? null : CreateLink(page - 1, pageSize);
+        }
+
+        private string CreateLinkToNextPage(int page, int pageSize, int numberOfPages)
+        {
+            return page >= numberOfPages - 1 ? null : CreateLink(page = page + 1, pageSize);
+        }
+    }
+}

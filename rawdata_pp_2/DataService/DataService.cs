@@ -49,5 +49,25 @@ namespace DomainModel
                 db.SaveChanges();
             }
         }
+
+        public List<Post> GetPosts(int page, int pageSize)
+        {
+            using(var db= new StackoverflowContext())
+            {
+                return db.posts
+                    .Include(x => x.Comment)
+                    .Skip(page * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+            }
+        }
+
+        public int GetNumberOfPosts()
+        {
+            using (var db = new StackoverflowContext())
+            {
+                return db.posts.Count();
+            }
+        }
     }
 }

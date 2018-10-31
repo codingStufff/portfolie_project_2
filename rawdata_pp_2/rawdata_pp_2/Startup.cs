@@ -40,7 +40,8 @@ namespace rawdata_pp_2
         private void MapperConfig()
         {
             Mapper.Initialize(cfg => {
-                cfg.CreateMap<Post, PostModel>();     
+                cfg.CreateMap<Post, PostModel>();
+                cfg.CreateMap<Post, PostListModel>();
             });
         }
     }
