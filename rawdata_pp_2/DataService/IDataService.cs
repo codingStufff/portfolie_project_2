@@ -11,5 +11,6 @@ namespace DomainModel
         void createNewUser(string _userpassword, string _userName, int _age, string _displayName, string _userLocation);
         List<Post> GetPosts(int page, int pageSize);
         int GetNumberOfPosts();
+        List<User> GetUsers();
     }
 }

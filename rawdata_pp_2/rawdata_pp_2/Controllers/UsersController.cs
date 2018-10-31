@@ -17,6 +17,12 @@ namespace rawdata_pp_2.Controllers
         {
             _dataService = dataService;
         }
+        [HttpGet]
+        public IActionResult GetUsers()
+        {
+            var users = _dataService.GetUsers();
+            return Ok(users);
+        }
 
         [HttpPost]
         public IActionResult CreateUser(User user)

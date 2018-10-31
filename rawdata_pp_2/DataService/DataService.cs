@@ -69,5 +69,13 @@ namespace DomainModel
                 return db.posts.Count();
             }
         }
+
+        public List<User> GetUsers()
+        {
+            using(var db = new StackoverflowContext())
+            {
+                return db.user.ToList();
+            }
+        }
     }
 }
