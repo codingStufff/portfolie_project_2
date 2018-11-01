@@ -41,7 +41,8 @@ namespace rawdata_pp_2
         {
             Mapper.Initialize(cfg => {
                 cfg.CreateMap<Post, PostModel>();
-                cfg.CreateMap<Post, PostListModel>();
+                cfg.CreateMap<Post, PostListModel>()
+                    .ForMember(x => x.Comment, opt => opt.MapFrom(src => src.Comment.Id));
             });
         }
     }

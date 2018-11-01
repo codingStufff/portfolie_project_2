@@ -7,10 +7,12 @@ namespace DomainModel
     {
         Post GetPostById(int id);
         List<Post> GetPostsByTags(string tagSearch);
-        List<Post> getPosts();
-        void createNewUser(string _userpassword, string _userName, int _age, string _displayName, string _userLocation);
+        //List<Post> GetPosts();
+        void CreateNewUser(string _userpassword, string _userName, int _age, string _displayName, string _userLocation);
         List<Post> GetPosts(int page, int pageSize);
+        List<Post> GetPosts(Args args);
         int GetNumberOfPosts();
         List<User> GetUsers();
+        Comment GetComment(int id);
     }
 }

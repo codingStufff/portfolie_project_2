@@ -27,7 +27,7 @@ namespace rawdata_pp_2.Controllers
         [HttpPost]
         public IActionResult CreateUser(User user)
         {
-            _dataService.createNewUser(user.UserPassword, user.Username, user.Age, user.DisplayName, user.UserLocation);
+            _dataService.CreateNewUser(user.UserPassword, user.Username, user.Age, user.DisplayName, user.UserLocation);
             return Ok(user);
         }
     }

@@ -23,16 +23,16 @@ namespace DomainModel
             }
         }
 
-        public List<Post> getPosts()
-        {
-            using (var db = new StackoverflowContext())
-            {
-                List<Post> list = db.posts.ToList();
-                return list;
-            }
-        }
+        //public List<Post> GetPosts(int page, int pageSize)
+        //{
+        //    using (var db = new StackoverflowContext())
+        //    {
+        //        List<Post> list = db.posts.ToList();
+        //        return list;
+        //    }
+        //}
 
-        public void createNewUser(string _userpassword, string _userName, int _age, string _displayName, string _userLocation)
+        public void CreateNewUser(string _userpassword, string _userName, int _age, string _displayName, string _userLocation)
         {
             using (var db = new StackoverflowContext())
             {
@@ -75,6 +75,34 @@ namespace DomainModel
             using(var db = new StackoverflowContext())
             {
                 return db.user.ToList();
+            }
+        }
+
+        public Comment GetComment(int id)
+        {
+            using(var db = new StackoverflowContext())
+            {
+               return db.comment.FirstOrDefault(x => x.Id == id);
+            }
+        }
+
+        public List<Post> GetPosts(Args args)
+        {
+            using (var db = new StackoverflowContext())
+            {
+                var query = db.posts
+                    .Include(x => x.Comment)
+                .Skip(args.Page * args.PageSize)
+                .Take(args.PageSize);
+
+                //if (!string.IsNullOrEmpty(args.Tag))
+                //{
+                //    query.Where(x => x.Tags.Contains(args.Tag));
+                //}
+
+                //query.Skip(args.Page * args.PageSize)
+                //    .Take(args.PageSize);
+                return query.ToList();
             }
         }
     }
