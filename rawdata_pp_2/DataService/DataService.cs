@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
+
 namespace DomainModel
 {
     public class DataService : IDataService
     {
+        private string connectingString = "host=localhost;db=stackoverflow;uid=postgres;pwd=postgres";
         public Post GetPostById(int id)
         {
             using (var db = new StackoverflowContext())
@@ -78,6 +81,7 @@ namespace DomainModel
             }
         }
 
+<<<<<<< HEAD
         public Comment GetComment(int id)
         {
             using(var db = new StackoverflowContext())
@@ -104,6 +108,16 @@ namespace DomainModel
                 //    .Take(args.PageSize);
                 return query.ToList();
             }
+=======
+        public int createUser(string userPWD, string userName, int age, string displayName,string userLoc, string salt)
+        {
+            using (var db = new StackoverflowContext())
+            {
+                var result = db.Database.ExecuteSqlCommand("select * createusers({0},{1},{2},{3},{4},{5},{6}", userPWD, userName, age, displayName, userLoc, salt);
+                // var userId = db.userId.FromSql("select * createusers({0},{1},{2},{3},{4},{5},{6}", userPWD, userName, age, displayName, userLoc, salt);
+                return result;
+            }   
+>>>>>>> b542ee85ca36b542b6522007bd363aabceb8e0cb
         }
     }
 }

@@ -8,12 +8,18 @@ using Microsoft.Extensions.Logging.Console;
 
 namespace DomainModel
 {
+    //public class UserID
+    //{
+    //    public int Id { get; set; }
+    //}
     public class StackoverflowContext : DbContext
     {
         public DbSet<Post> posts { get; set; }
         public DbSet<Comment> comment { get; set; }
         public DbSet<Author> author { get; set; }
         public DbSet<User> user { get; set; }
+        
+        //public DbQuery<UserID> userId { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -61,6 +67,7 @@ namespace DomainModel
             builder.Entity<User>().Property(x => x.DisplayName).HasColumnName("displayname");
             builder.Entity<User>().Property(x => x.UserLocation).HasColumnName("userlocation");
             builder.Entity<User>().Property(x => x.CreationDate).HasColumnName("creationdate");
+            builder.Entity<User>().Property(x => x.Salt).HasColumnName("salt");
         }
         public static readonly LoggerFactory MyLoggerFactory
         = new LoggerFactory(new[]
