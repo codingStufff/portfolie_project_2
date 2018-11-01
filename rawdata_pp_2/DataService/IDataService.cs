@@ -14,5 +14,6 @@ namespace DomainModel
         int GetNumberOfPosts();
         List<User> GetUsers();
         Comment GetComment(int id);
+        void createUser(string userPWD, string userName, int age, string displayName, string userLoc, string salt);
     }
 }

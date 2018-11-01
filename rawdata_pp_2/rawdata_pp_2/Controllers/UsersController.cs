@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace rawdata_pp_2.Controllers
 {
-    [Route("api/users/")]
+    [Route("api/users")]
     [ApiController]
     public class UsersController : Controller
     {
@@ -27,7 +27,7 @@ namespace rawdata_pp_2.Controllers
         [HttpPost]
         public IActionResult CreateUser(User user)
         {
-            _dataService.CreateNewUser(user.UserPassword, user.Username, user.Age, user.DisplayName, user.UserLocation);
+            _dataService.createUser(user.UserPassword, user.Username, user.Age, user.DisplayName, user.UserLocation, user.Salt);
             return Ok(user);
         }
     }
