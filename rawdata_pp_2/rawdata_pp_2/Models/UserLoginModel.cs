@@ -7,5 +7,8 @@ namespace rawdata_pp_2.Models
 {
     public class UserLoginModel
     {
+        public string UserName { get; set; }
+        public string UserPassword { get; set; }
+
     }
 }

@@ -68,6 +68,8 @@ namespace rawdata_pp_2.Controllers
             
         }
 
+        // assist methods
+
         private PostListModel CreatePostList(Post post)
         {
             var model = Mapper.Map<PostListModel>(post);
