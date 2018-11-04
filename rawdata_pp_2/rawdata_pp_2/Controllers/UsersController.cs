@@ -20,6 +20,7 @@ namespace rawdata_pp_2.Controllers
     {
         private readonly IDataService _dataService;
         public PasswordService _passwordService = new PasswordService();
+        // this needs to be in the configuration file!!! safely hidden away
         public int PswSize = 256;
 
 
@@ -46,6 +47,7 @@ namespace rawdata_pp_2.Controllers
 
         public IActionResult UserLogin(UserLoginModel model)
         {
+            // this needs to be in the configuration file!! hidden safely away
             string key = "AasdasdaASFF78SDsdasDSADAF";
 
             if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.UserPassword))
@@ -63,6 +65,7 @@ namespace rawdata_pp_2.Controllers
             
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenKey = Encoding.UTF8.GetBytes(key);
+
             var tokenDescription = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
