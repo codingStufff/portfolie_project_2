@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using DomainModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using rawdata_pp_2.Models;
+using rawdata_pp_2.Service;
 
 namespace rawdata_pp_2.Controllers
 {
@@ -13,6 +15,9 @@ namespace rawdata_pp_2.Controllers
     public class UsersController : Controller
     {
         private readonly IDataService _dataService;
+        public PasswordService _passwordService = new PasswordService();
+        public int PswSize = 256;
+
         public UsersController(IDataService dataService)
         {
             _dataService = dataService;
@@ -25,10 +30,13 @@ namespace rawdata_pp_2.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateUser(User user)
+        public IActionResult CreateUser(UserRegistrationModel model)
         {
-            _dataService.createUser(user.UserPassword, user.Username, user.Age, user.DisplayName, user.UserLocation, user.Salt);
-            return Ok(user);
+            //int.TryParse(PswSize, out var size);
+            var salt = PasswordService.GenerateSalt(PswSize);
+            var pwd = PasswordService.HashPassword(model.UserPassword, salt, PswSize);
+            _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
+            return Ok();
         }
     }
 }
