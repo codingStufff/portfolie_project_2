@@ -44,7 +44,7 @@ namespace rawdata_pp_2.Controllers
             _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
             return Ok();
         }
-
+        [HttpPost("{login}")]
         public IActionResult UserLogin(UserLoginModel model)
         {
             // this needs to be in the configuration file!! hidden safely away
@@ -61,8 +61,27 @@ namespace rawdata_pp_2.Controllers
                 return BadRequest();
             }*/
 
+            var tempUser = _dataService.GetUserByUsername(model.UserName);
 
-            
+            /* Test example
+            if(tempUser != null){
+                return Ok("UserExists");
+            }
+            */
+
+
+            if (tempUser == null)
+            {
+                return BadRequest("User doesn't exist");
+            }
+
+            var pwd = PasswordService.HashPassword(model.UserPassword, tempUser.Salt, PswSize);
+
+            //Base Case
+            if (pwd != tempUser.UserPassword){
+                return BadRequest("Password wasn't correct");
+            }
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenKey = Encoding.UTF8.GetBytes(key);
 
