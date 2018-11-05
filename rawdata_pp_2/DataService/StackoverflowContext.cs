@@ -23,7 +23,7 @@ namespace DomainModel
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=Nph4me");
+            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=tsy78Bqp");
 
         }
         protected override void OnModelCreating(ModelBuilder builder)

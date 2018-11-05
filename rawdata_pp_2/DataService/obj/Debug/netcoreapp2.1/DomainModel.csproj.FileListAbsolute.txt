@@ -16,15 +16,6 @@ C:/Users/Devendra/Documents/rawdata/portfolie_project_2/rawdata_pp_2/DataService
 C:/Users/Devendra/Documents/rawdata/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.AssemblyInfo.cs
 C:/Users/Devendra/Documents/rawdata/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.dll
 C:/Users/Devendra/Documents/rawdata/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.pdb
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/bin/Debug/netcoreapp2.1/DomainModel.deps.json
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/bin/Debug/netcoreapp2.1/DomainModel.dll
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/bin/Debug/netcoreapp2.1/DomainModel.pdb
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.csprojAssemblyReference.cache
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.csproj.CoreCompileInputs.cache
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.AssemblyInfoInputs.cache
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.AssemblyInfo.cs
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.dll
-C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.pdb
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/bin/Debug/netcoreapp2.1/DomainModel.deps.json
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/bin/Debug/netcoreapp2.1/DomainModel.dll
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/bin/Debug/netcoreapp2.1/DomainModel.pdb
@@ -34,3 +25,11 @@ C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_p
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.AssemblyInfo.cs
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.dll
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.pdb
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\DomainModel.deps.json
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\DomainModel.dll
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\DomainModel.pdb
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.AssemblyInfoInputs.cache
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.AssemblyInfo.cs
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.dll
+C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.pdb
