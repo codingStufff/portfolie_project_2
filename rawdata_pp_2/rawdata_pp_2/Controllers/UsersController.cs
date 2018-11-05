@@ -48,6 +48,7 @@ namespace rawdata_pp_2.Controllers
         public IActionResult UserLogin(UserLoginModel model)
         {
             // this needs to be in the configuration file!! hidden safely away
+
             string key = "AasdasdaASFF78SDsdasDSADAF";
 
             if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.UserPassword))

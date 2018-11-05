@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using rawdata_pp_2.Models;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace rawdata_pp_2
 {
@@ -18,9 +21,30 @@ namespace rawdata_pp_2
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            string _key = "AasdasdaASFF78SDsdasDSADAF";
+            var key = Encoding.UTF8.GetBytes(_key);
             services.AddMvc();
             // this is the actual injection of the dataservice obeying the IDataService interface
             services.AddSingleton<IDataService, DataService>();
+
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               .AddJwtBearer(option =>
+               {
+                   option.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateAudience = false,
+                       ValidateIssuer = false,
+                       ValidateIssuerSigningKey = true,
+                       ValidateLifetime = true,
+                       IssuerSigningKey = new SymmetricSecurityKey(key),
+                       ClockSkew = TimeSpan.Zero
+                   };
+               });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
