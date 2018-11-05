@@ -81,6 +81,12 @@ namespace DomainModel
             }
         }
 
+        public User GetUserByUsername (string FetchUser){
+            using (var db = new StackoverflowContext())
+            {
+                return db.user.FirstOrDefault(x => x.Username == FetchUser);
+            }
+        }
 
         public Comment GetComment(int id)
         {
