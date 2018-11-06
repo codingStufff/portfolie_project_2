@@ -60,6 +60,7 @@ namespace rawdata_pp_2
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseAuthentication();
             app.UseMvc();
             /*app.Run(async (context) =>
             {
