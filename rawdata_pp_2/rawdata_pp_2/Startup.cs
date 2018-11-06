@@ -20,15 +20,20 @@ namespace rawdata_pp_2
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public IConfiguration _configuration;
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        public void ConfigureServices(IServiceCollection services)
         {
             //string _key = "AasdasdaASFF78SDsdasDSADAF";
-            _configuration = configuration;
+            
             services.AddMvc();
             // this is the actual injection of the dataservice obeying the IDataService interface
             services.AddSingleton<IDataService, DataService>();
-            var key = Encoding.UTF8.GetBytes(_configuration["security: key"]);
+            var key = Encoding.UTF8.GetBytes(Configuration["security:key"]);
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                .AddJwtBearer(option =>

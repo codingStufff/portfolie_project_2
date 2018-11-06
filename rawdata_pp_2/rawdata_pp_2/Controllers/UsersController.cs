@@ -41,7 +41,7 @@ namespace rawdata_pp_2.Controllers
         [HttpPost]
         public IActionResult CreateUser(UserRegistrationModel model)
         {
-            int.TryParse(_configuration["security: pwdsize"], out var size);
+            int.TryParse(_configuration["security:pwdsize"], out var size);
             var salt = PasswordService.GenerateSalt(size);
             var pwd = PasswordService.HashPassword(model.UserPassword, salt, size);
             _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
@@ -53,7 +53,7 @@ namespace rawdata_pp_2.Controllers
             // this needs to be in the configuration file!! hidden safely away
 
             //string key = "AasdasdaASFF78SDsdasDSADAF";
-
+            int.TryParse(_configuration["security:pwdsize"], out var size);
             if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.UserPassword))
             {
                 return BadRequest("Both username and password needs to be filled");
@@ -79,7 +79,7 @@ namespace rawdata_pp_2.Controllers
                 return BadRequest("User doesn't exist");
             }
 
-            var pwd = PasswordService.HashPassword(model.UserPassword, tempUser.Salt, PswSize);
+            var pwd = PasswordService.HashPassword(model.UserPassword, tempUser.Salt, size);
 
             //Base Case
             if (pwd != tempUser.UserPassword){
@@ -87,7 +87,7 @@ namespace rawdata_pp_2.Controllers
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var tokenKey = Encoding.UTF8.GetBytes(_configuration["security: key"]);
+            var tokenKey = Encoding.UTF8.GetBytes(_configuration["security:key"]);
 
             var tokenDescription = new SecurityTokenDescriptor
             {
