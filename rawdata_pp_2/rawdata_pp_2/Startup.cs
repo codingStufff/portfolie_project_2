@@ -12,6 +12,7 @@ using rawdata_pp_2.Models;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
 
 namespace rawdata_pp_2
 {
@@ -19,16 +20,15 @@ namespace rawdata_pp_2
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        public IConfiguration _configuration;
+        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-
-
-            string _key = "AasdasdaASFF78SDsdasDSADAF";
-            var key = Encoding.UTF8.GetBytes(_key);
+            //string _key = "AasdasdaASFF78SDsdasDSADAF";
+            _configuration = configuration;
             services.AddMvc();
             // this is the actual injection of the dataservice obeying the IDataService interface
             services.AddSingleton<IDataService, DataService>();
-
+            var key = Encoding.UTF8.GetBytes(_configuration["security: key"]);
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                .AddJwtBearer(option =>

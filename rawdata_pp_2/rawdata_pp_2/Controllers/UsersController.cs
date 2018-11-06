@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using DomainModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using rawdata_pp_2.Models;
 using rawdata_pp_2.Service;
@@ -19,13 +20,15 @@ namespace rawdata_pp_2.Controllers
     public class UsersController : Controller
     {
         private readonly IDataService _dataService;
-        public PasswordService _passwordService = new PasswordService();
+        private readonly IConfiguration _configuration;
+        //public PasswordService _passwordService = new PasswordService();
         // this needs to be in the configuration file!!! safely hidden away
-        public int PswSize = 256;
+        //public int PswSize = 256;
 
 
-        public UsersController(IDataService dataService)
+        public UsersController(IDataService dataService, IConfiguration configuration)
         {
+            _configuration = configuration;
             _dataService = dataService;
         }
         [HttpGet]
@@ -38,9 +41,9 @@ namespace rawdata_pp_2.Controllers
         [HttpPost]
         public IActionResult CreateUser(UserRegistrationModel model)
         {
-            //int.TryParse(PswSize, out var size);
-            var salt = PasswordService.GenerateSalt(PswSize);
-            var pwd = PasswordService.HashPassword(model.UserPassword, salt, PswSize);
+            int.TryParse(_configuration["security: pwdsize"], out var size);
+            var salt = PasswordService.GenerateSalt(size);
+            var pwd = PasswordService.HashPassword(model.UserPassword, salt, size);
             _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
             return Ok();
         }
@@ -49,7 +52,7 @@ namespace rawdata_pp_2.Controllers
         {
             // this needs to be in the configuration file!! hidden safely away
 
-            string key = "AasdasdaASFF78SDsdasDSADAF";
+            //string key = "AasdasdaASFF78SDsdasDSADAF";
 
             if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.UserPassword))
             {
@@ -84,7 +87,7 @@ namespace rawdata_pp_2.Controllers
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var tokenKey = Encoding.UTF8.GetBytes(key);
+            var tokenKey = Encoding.UTF8.GetBytes(_configuration["security: key"]);
 
             var tokenDescription = new SecurityTokenDescriptor
             {
