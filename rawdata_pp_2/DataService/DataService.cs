@@ -101,17 +101,22 @@ namespace DomainModel
             using (var db = new StackoverflowContext())
             {
                 var query = db.posts
-                    .Include(x => x.Comment)
-                .Skip(args.Page * args.PageSize)
-                .Take(args.PageSize);
+                              .Include(x => x.Comment).AsQueryable();
 
-                //if (!string.IsNullOrEmpty(args.Tag))
-                //{
-                //    query.Where(x => x.Tags.Contains(args.Tag));
-                //}
 
-                //query.Skip(args.Page * args.PageSize)
-                //    .Take(args.PageSize);
+             // query = query.Where(x => x.Tags.Contains("sasdsdasd"));
+
+                //query = query.Skip(args.Page * args.PageSize)
+                //.Take(args.PageSize);
+                /*
+                if (!string.IsNullOrEmpty(args.Tag))
+                {
+                   query = query.Where(x => x.Tags.Contains(args.Tag));
+
+                }
+                */
+                query = query.Skip(args.Page * args.PageSize)
+                    .Take(args.PageSize);
                 return query.ToList();
             }
         }
