@@ -9,7 +9,7 @@ namespace DomainModel
 {
     public class DataService : IDataService
     {
-        private string connectingString = "host=localhost;db=stackoverflow;uid=postgres;pwd=postgres";
+       // private string connectingString = "host=localhost;db=stackoverflow;uid=postgres;pwd=postgres";
         public Post GetPostById(int id)
         {
             using (var db = new StackoverflowContext())

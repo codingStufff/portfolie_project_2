@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using DomainModel;
 using AutoMapper;
 using rawdata_pp_2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rawdata_pp_2.Controllers
 {
@@ -44,6 +45,7 @@ namespace rawdata_pp_2.Controllers
         }
 
         [HttpGet(Name =nameof(GetPosts))]
+        [Authorize]
         public IActionResult GetPosts([FromQuery] Args args)
         {
            
