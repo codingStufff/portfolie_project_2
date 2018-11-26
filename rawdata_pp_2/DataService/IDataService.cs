@@ -16,5 +16,6 @@ namespace DomainModel
         Comment GetComment(int id);
         void createUser(string userPWD, string userName, int age, string displayName, string userLoc, string salt);
         User GetUserByUsername(string FetchUser);
+        void wordToWordSearch();
     }
 }

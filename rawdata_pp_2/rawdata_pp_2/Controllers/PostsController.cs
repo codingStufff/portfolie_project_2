@@ -25,6 +25,13 @@ namespace rawdata_pp_2.Controllers
             return View();
         }
 
+       [HttpGet]
+        public IActionResult Search()
+        {
+            _dataService.wordToWordSearch();
+            return Ok();
+        }
+
         [HttpGet("{id}", Name = nameof(GetPost))]
         public IActionResult GetPost(int id)
         {
@@ -45,11 +52,10 @@ namespace rawdata_pp_2.Controllers
         }
 
         [HttpGet(Name =nameof(GetPosts))]
-        [Authorize]
+        //[Authorize]
         public IActionResult GetPosts([FromQuery] Args args)
         {
-           
-                var posts = _dataService.GetPosts(args)
+            var posts = _dataService.GetPosts(args)
                     .Select(CreatePostList);
             
                 var numberOfItems = _dataService.GetNumberOfPosts();
@@ -85,6 +91,7 @@ namespace rawdata_pp_2.Controllers
             
             return model;
         }
+     
 
         private static int CalculateTotalPages(int pageSize, int numberOfItems)
         {

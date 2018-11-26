@@ -23,14 +23,14 @@ namespace DomainModel
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=putusernamehere;pwd=putpasswordhere");
+            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=tsy78Bqp");
 
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // mapping the posts table data from the database
             builder.Entity<Post>().ToTable("posts");
-            builder.Entity<Post>().Property(x => x.Id).HasColumnName("id");
+            builder.Entity<Post>().Property(x => x.Id).HasColumnName("postid");
             builder.Entity<Post>().Property(x => x.TypeId).HasColumnName("typeid");
             builder.Entity<Post>().Property(x => x.AcceptedAnswerId).HasColumnName("acceptedanswerid");
             builder.Entity<Post>().Property(x => x.CreationDate).HasColumnName("creationdate");

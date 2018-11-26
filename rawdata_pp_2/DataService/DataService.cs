@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Npgsql;
 
 namespace DomainModel
@@ -129,5 +131,23 @@ namespace DomainModel
             }   
 
         }
+
+        public void wordToWordSearch()
+        {
+            using (var db = new StackoverflowContext())
+            {
+                NpgsqlCommand reader = new NpgsqlCommand("select word from wi"); //db.Database.ExecuteSqlCommand("select wordtoword({0})",searchString );
+
+
+                NpgsqlDataReader result = reader.ExecuteReader();
+
+                while (result.Read())
+                {
+                    Console.Write("{0}\t",result[0]);
+                }
+                //return result.toList();
+            }
+        }
+       
     }
 }
