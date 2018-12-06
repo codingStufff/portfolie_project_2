@@ -61,7 +61,9 @@ namespace rawdata_pp_2
                 app.UseDeveloperExceptionPage();
             }
             app.UseAuthentication();
+            app.UseFileServer();
             app.UseMvc();
+
             /*app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

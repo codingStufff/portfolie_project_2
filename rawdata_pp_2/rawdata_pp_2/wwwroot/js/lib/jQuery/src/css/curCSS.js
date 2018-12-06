@@ -1,16 +1,21 @@
 define( [
 	"../core",
+	"./var/rboxStyle",
 	"./var/rnumnonpx",
-	"./var/rmargin",
 	"./var/getStyles",
 	"./support",
 	"../selector" // Get jQuery.contains
-], function( jQuery, rnumnonpx, rmargin, getStyles, support ) {
+], function( jQuery, rboxStyle, rnumnonpx, getStyles, support ) {
 
 "use strict";
 
 function curCSS( elem, name, computed ) {
 	var width, minWidth, maxWidth, ret,
+
+		// Support: Firefox 51+
+		// Retrieving style before computed somehow
+		// fixes an issue with getting wrong values
+		// on detached elements
 		style = elem.style;
 
 	computed = computed || getStyles( elem );
@@ -30,7 +35,7 @@ function curCSS( elem, name, computed ) {
 		// but width seems to be reliably pixels.
 		// This is against the CSSOM draft spec:
 		// https://drafts.csswg.org/cssom/#resolved-values
-		if ( !support.pixelMarginRight() && rnumnonpx.test( ret ) && rmargin.test( name ) ) {
+		if ( !support.pixelBoxStyles() && rnumnonpx.test( ret ) && rboxStyle.test( name ) ) {
 
 			// Remember the original values
 			width = style.width;

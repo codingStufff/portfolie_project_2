@@ -2,16 +2,16 @@ define( [
 	"./core",
 	"./var/document",
 	"./var/documentElement",
+	"./var/isFunction",
 	"./var/rnothtmlwhite",
-	"./var/rcheckableType",
 	"./var/slice",
 	"./data/var/dataPriv",
 	"./core/nodeName",
 
 	"./core/init",
 	"./selector"
-], function( jQuery, document, documentElement, rnothtmlwhite,
-             rcheckableType, slice, dataPriv, nodeName ) {
+], function( jQuery, document, documentElement, isFunction, rnothtmlwhite,
+	slice, dataPriv, nodeName ) {
 
 "use strict";
 
@@ -420,7 +420,7 @@ jQuery.event = {
 			enumerable: true,
 			configurable: true,
 
-			get: jQuery.isFunction( hook ) ?
+			get: isFunction( hook ) ?
 				function() {
 					if ( this.originalEvent ) {
 							return hook( this.originalEvent );
@@ -477,11 +477,9 @@ jQuery.event = {
 		},
 		click: {
 
-			// For checkable types, fire native event so checked state will be right
+			// For checkbox, fire native event so checked state will be right
 			trigger: function() {
-				if ( rcheckableType.test( this.type ) &&
-					this.click && nodeName( this, "input" ) ) {
-
+				if ( this.type === "checkbox" && this.click && nodeName( this, "input" ) ) {
 					this.click();
 					return false;
 				}
@@ -557,7 +555,7 @@ jQuery.Event = function( src, props ) {
 	}
 
 	// Create a timestamp if incoming event doesn't have one
-	this.timeStamp = src && src.timeStamp || jQuery.now();
+	this.timeStamp = src && src.timeStamp || Date.now();
 
 	// Mark it as fixed
 	this[ jQuery.expando ] = true;

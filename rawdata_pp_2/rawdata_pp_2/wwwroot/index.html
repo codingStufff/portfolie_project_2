@@ -2,9 +2,34 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <link href="js/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="js/lib/jqcloud2/dist/jqcloud.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <title>Portfolio App</title>
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Group 11</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Posts</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 box">
+                <input class="form-control mr-sm-2 align-items-center" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><span class="glyphicon glyphicon-search">Search</span></button>
+            </form>
+        </div>
+    </nav>
 </body>
+<script src="js/lib/requirejs/require.js"></script>
 </html>
