@@ -8,13 +8,11 @@
     <title>Portfolio App</title>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Group 11</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -30,6 +28,10 @@
             </form>
         </div>
     </nav>
+    <login></login>
+    <div><span data-bind="text: title"></span></div>
+
+    <div data-bind="component: {name: login}"></div>
 </body>
-<script src="js/lib/requirejs/require.js"></script>
+<script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
 </html>

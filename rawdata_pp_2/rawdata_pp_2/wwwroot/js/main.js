@@ -16,7 +16,18 @@ require.config({
 });
 
 
+//register Components
+require(['knockout'], function (ko){
+
+    ko.components.register("login",{
+        viewModel: {require: 'components/login/login'}, 
+        template: {require: 'text!components/login/loginView.html'} 
+        });
+});
+
+
 // start application
-require(['knockout', 'app', 'jqcloud'], function (ko, app) {
+require(['knockout', 'app'], function (ko, app) {
+
     ko.applyBindings(app);
 });
