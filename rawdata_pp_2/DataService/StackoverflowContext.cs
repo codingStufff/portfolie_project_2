@@ -18,10 +18,16 @@ namespace DomainModel
         public DbSet<Comment> comment { get; set; }
         public DbSet<Author> author { get; set; }
         public DbSet<User> user { get; set; }
-        
-        //public DbQuery<UserID> userId { get; set; }
-        
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        public class SearchResult
+        {
+            public int Id { get; set; }
+            public string ProductName { get; set; }
+        }
+
+            //public DbQuery<UserID> userId { get; set; }
+
+            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=tsy78Bqp");
 
@@ -76,6 +82,8 @@ namespace DomainModel
             => category == DbLoggerCategory.Database.Command.Name
                && level == LogLevel.Information, true)
         });
+
+
 
     }
 
