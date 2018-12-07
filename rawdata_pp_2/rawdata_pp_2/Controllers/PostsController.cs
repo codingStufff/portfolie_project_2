@@ -28,7 +28,7 @@ namespace rawdata_pp_2.Controllers
        [HttpGet]
         public IActionResult Search()
         {
-            _dataService.wordToWordSearch();
+            _dataService.wordToWordSearch("hej");
             return Ok();
         }
 
