@@ -59,6 +59,8 @@ namespace DomainModel
         {
             using(var db= new StackoverflowContext())
             {
+
+               // var result in db.SearchResults.FromSql("select * from search({0})", "al")
                 return db.posts
                     .Include(x => x.Comment)
                     .Skip(page * pageSize)
@@ -132,20 +134,26 @@ namespace DomainModel
 
         }
 
-        public void wordToWordSearch()
+        public List<SearchResult> wordToWordSearch(String wordSearch)
         {
+
+            String[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             {
+
+               // var result in SearchResult.FromSql("select * from search({0})", "al");
+                var result = db.SearchResults.FromSql("select * from bestmatchsearch({0},{1},{2})", wordSplit[0], wordSplit[1],wordSplit[2]).ToList();
+
+                
+                /*
                 NpgsqlCommand reader = new NpgsqlCommand("select word from wi"); //db.Database.ExecuteSqlCommand("select wordtoword({0})",searchString );
-
-
                 NpgsqlDataReader result = reader.ExecuteReader();
-
                 while (result.Read())
                 {
                     Console.Write("{0}\t",result[0]);
                 }
-                //return result.toList();
+                */
+                return result;
             }
         }
        

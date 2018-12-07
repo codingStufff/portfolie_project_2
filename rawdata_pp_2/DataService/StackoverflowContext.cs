@@ -19,15 +19,13 @@ namespace DomainModel
         public DbSet<Author> author { get; set; }
         public DbSet<User> user { get; set; }
 
-        public class SearchResult
-        {
-            public int Id { get; set; }
-            public string ProductName { get; set; }
-        }
+        public DbQuery<SearchResult> SearchResults { get; set; }
 
-            //public DbQuery<UserID> userId { get; set; }
 
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        //public DbQuery<UserID> userId { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=tsy78Bqp");
 
