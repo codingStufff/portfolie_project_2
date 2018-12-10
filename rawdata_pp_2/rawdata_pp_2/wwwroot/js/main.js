@@ -23,6 +23,12 @@ require(['knockout'], function (ko){
         viewModel: {require: 'components/login/login'}, 
         template: {require: 'text!components/login/loginView.html'} 
         });
+
+    ko.components.register("home", {
+        viewModel: {require: 'components/Home/home'},
+        template: {require: 'text!components/Home/home.html'}
+    });
+        
 });
 
 

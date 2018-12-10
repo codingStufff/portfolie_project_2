@@ -1,15 +1,21 @@
 ﻿define(['knockout', /*'dataService',*/ 'postman'], function (ko, /*ds,*/ postman) {
-    return function () {
+    return function (params) 
+    {
         var username = ko.observable();
         var password = ko.observable();
 
-        var test = function () {
-            console.log('hej');
+        var login = function () 
+        {
+            console.log(username()+' '+password());
+
         };
 
 
         return{
-            test
+            login,
+            username,
+            password
+
         };
 
     };
