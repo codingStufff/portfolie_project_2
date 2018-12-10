@@ -140,7 +140,7 @@ namespace DomainModel
             String[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             { 
-                var result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit[0], wordSplit[1],wordSplit[2]).ToList();
+                var result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit).ToList();
 
                 return result;
             }
@@ -152,7 +152,7 @@ namespace DomainModel
             String[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             {
-                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({},{},{})", wordSplit[0], wordSplit[1], wordSplit[2]).ToList();
+                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({0})", wordSplit).ToList();
 
                 return result;
             }

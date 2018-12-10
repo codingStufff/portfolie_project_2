@@ -25,10 +25,17 @@ namespace rawdata_pp_2.Controllers
             return View();
         }
 
-       [HttpGet("search/{searchString}")]
-        public IActionResult Search(String searchString)
+       [HttpGet("bestMatch/{searchString}")]
+        public IActionResult BestMatch(String searchString)
         {
             var results = _dataService.wordToWordSearch(searchString).Select(CreateSearchList);
+            return Ok(results);
+        }
+
+        [HttpGet ("exactMatch/{searchString}")]
+        public IActionResult ExactMatch(String searchString)
+        {
+            var results = _dataService.ExactMatch(searchString);
             return Ok(results);
         }
 

@@ -7,7 +7,7 @@ namespace rawdata_pp_2.Models
 {
     public class ExactSearchResultListModel
     {
-        public int postid { get; set; }
+        public string url { get; set; }
         public string body { get; set; }
     }
 }
