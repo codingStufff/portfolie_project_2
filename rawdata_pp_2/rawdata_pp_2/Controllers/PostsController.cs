@@ -25,11 +25,18 @@ namespace rawdata_pp_2.Controllers
             return View();
         }
 
-       [HttpGet]
-        public IActionResult Search()
+       [HttpGet("bestMatch/{searchString}")]
+        public IActionResult BestMatch(String searchString)
         {
-            _dataService.wordToWordSearch("hej");
-            return Ok();
+            var results = _dataService.wordToWordSearch(searchString).Select(CreateSearchList);
+            return Ok(results);
+        }
+
+        [HttpGet ("exactMatch/{searchString}")]
+        public IActionResult ExactMatch(String searchString)
+        {
+            var results = _dataService.ExactMatch(searchString);
+            return Ok(results);
         }
 
         [HttpGet("{id}", Name = nameof(GetPost))]
@@ -89,6 +96,13 @@ namespace rawdata_pp_2.Controllers
                 model.Comment = Url.Link(nameof(CommentsController.GetComment), id);
             }
             
+            return model;
+        }
+
+        private SearchResultListModel CreateSearchList(SearchResult sr)
+        {
+            var model = Mapper.Map<SearchResultListModel>(sr);
+            model.URL = Url.Link(nameof(GetPost), new { id = sr.postid });
             return model;
         }
      

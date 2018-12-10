@@ -17,6 +17,6 @@ namespace DomainModel
         void createUser(string userPWD, string userName, int age, string displayName, string userLoc, string salt);
         User GetUserByUsername(string FetchUser);
         List<SearchResult> wordToWordSearch(string wordSearch);
-
+        List<ExactMatchResult> ExactMatch(String wordSearch);
     }
 }
