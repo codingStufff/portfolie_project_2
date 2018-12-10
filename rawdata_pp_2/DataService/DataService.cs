@@ -139,22 +139,24 @@ namespace DomainModel
 
             String[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
-            {
+            { 
+                var result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit[0], wordSplit[1],wordSplit[2]).ToList();
 
-               // var result in SearchResult.FromSql("select * from search({0})", "al");
-                var result = db.SearchResults.FromSql("select * from bestmatchsearch({0},{1},{2})", wordSplit[0], wordSplit[1],wordSplit[2]).ToList();
-
-                
-                /*
-                NpgsqlCommand reader = new NpgsqlCommand("select word from wi"); //db.Database.ExecuteSqlCommand("select wordtoword({0})",searchString );
-                NpgsqlDataReader result = reader.ExecuteReader();
-                while (result.Read())
-                {
-                    Console.Write("{0}\t",result[0]);
-                }
-                */
                 return result;
             }
+
+        }
+
+        public List<ExactMatchResult> ExactMatch(String wordSearch)
+        {
+            String[] wordSplit = wordSearch.Split(' ');
+            using (var db = new StackoverflowContext())
+            {
+                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({},{},{})", wordSplit[0], wordSplit[1], wordSplit[2]).ToList();
+
+                return result;
+            }
+
         }
        
     }

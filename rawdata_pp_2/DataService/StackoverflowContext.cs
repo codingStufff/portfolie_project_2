@@ -20,6 +20,7 @@ namespace DomainModel
         public DbSet<User> user { get; set; }
 
         public DbQuery<SearchResult> SearchResults { get; set; }
+        public DbQuery<ExactMatchResult> ExactSearchResults { get; set; }
 
 
 
@@ -27,7 +28,7 @@ namespace DomainModel
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=Nph4me");
+            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=tsy78Bqp");
 
         }
         protected override void OnModelCreating(ModelBuilder builder)
@@ -72,6 +73,15 @@ namespace DomainModel
             builder.Entity<User>().Property(x => x.UserLocation).HasColumnName("userlocation");
             builder.Entity<User>().Property(x => x.CreationDate).HasColumnName("creationdate");
             builder.Entity<User>().Property(x => x.Salt).HasColumnName("salt");
+
+            //search results for bestmatch and weightsearch
+            builder.Query<SearchResult>().Property(x => x.postid).HasColumnName("postid");
+            builder.Query<SearchResult>().Property(x => x.rank).HasColumnName("rank");
+            builder.Query<SearchResult>().Property(x => x.body).HasColumnName("body");
+
+            //search results for exactmatch
+            builder.Query<ExactMatchResult>().Property(x => x.postid).HasColumnName("postid");
+            builder.Query<ExactMatchResult>().Property(x => x.body).HasColumnName("body");
         }
         public static readonly LoggerFactory MyLoggerFactory
         = new LoggerFactory(new[]
