@@ -48,11 +48,7 @@ namespace rawdata_pp_2.Controllers
             return Ok();
         }
         [HttpPost("login")]
-<<<<<<< HEAD
         public IActionResult UserLogin([FromBody] UserLoginModel model)
-=======
-        public IActionResult UserLogin([FromBody]UserLoginModel model)
->>>>>>> f2771f542131f92ed5671abfdfe1a8964e97de46
         {
             // this needs to be in the configuration file!! hidden safely away
 
