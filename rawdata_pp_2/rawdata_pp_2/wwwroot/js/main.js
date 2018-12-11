@@ -6,7 +6,7 @@ require.config({
         jquery: 'lib/jquery/dist/jquery.min',
         text: 'lib/text/text',
         jqcloud: 'lib/jqcloud2/dist/jqcloud',
-        //dataService: 'services/dataService',
+        dataService: 'services/dataService',
         postman: 'services/postman'
     },
     shim: {

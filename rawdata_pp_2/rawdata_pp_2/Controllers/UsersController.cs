@@ -47,8 +47,8 @@ namespace rawdata_pp_2.Controllers
             _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
             return Ok();
         }
-        [HttpPost("{login}")]
-        public IActionResult UserLogin(UserLoginModel model)
+        [HttpPost("login")]
+        public IActionResult UserLogin([FromBody] UserLoginModel model)
         {
             // this needs to be in the configuration file!! hidden safely away
 

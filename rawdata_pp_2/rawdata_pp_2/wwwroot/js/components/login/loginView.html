@@ -1,9 +1,20 @@
 ﻿<div>
-    <div>
-        User Name <input type="text" id="userName" />
-    </div>
-    <div>
-        Password <input type="text" id="password">
-    </div>
-    <button data-bind="click: test">Log In</button>
+    <form>
+        <div data-bind="text:errorMsg"></div>
+        <div>
+            Username <input data-bind="textInput: username" type="text" id="userName" />
+        </div>
+        <br />
+        <div>
+            Password <input data-bind="value: password" type="password" id="password">
+        </div>
+        <button  data-bind="click: doLogin">Login</button>
+    </form>
 </div>
+<!--good for debugging--> 
+<pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
+
+<!--<div>
+    
+    <button data-bind="click: login">Log In</button>
+</div>-->
