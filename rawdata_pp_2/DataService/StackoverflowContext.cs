@@ -18,13 +18,11 @@ namespace DomainModel
         public DbSet<Comment> comment { get; set; }
         public DbSet<Author> author { get; set; }
         public DbSet<User> user { get; set; }
+        public DbSet<Bookmark> bookmark { get; set; }
 
         public DbQuery<SearchResult> SearchResults { get; set; }
         public DbQuery<ExactMatchResult> ExactSearchResults { get; set; }
-
-
-
-        //public DbQuery<UserID> userId { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -74,6 +72,11 @@ namespace DomainModel
             builder.Entity<User>().Property(x => x.CreationDate).HasColumnName("creationdate");
             builder.Entity<User>().Property(x => x.Salt).HasColumnName("salt");
 
+            //mapping bookmark from the mark table from the database
+            builder.Entity<Bookmark>().ToTable("mark");
+            builder.Entity<Bookmark>().Property(x => x.postid).HasColumnName("post_id");
+            builder.Entity<Bookmark>().Property(x => x.userid).HasColumnName("user_id");
+            builder.Entity<Bookmark>().Property(x => x.annotation).HasColumnName("annotation");
             //search results for bestmatch and weightsearch
             builder.Query<SearchResult>().Property(x => x.postid).HasColumnName("postid");
             builder.Query<SearchResult>().Property(x => x.rank).HasColumnName("rank");

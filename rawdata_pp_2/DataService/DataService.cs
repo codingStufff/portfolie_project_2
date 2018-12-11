@@ -129,12 +129,20 @@ namespace DomainModel
             using (var db = new StackoverflowContext())
             {
                 db.Database.ExecuteSqlCommand("select createusers({0},{1},{2},{3},{4},{5})", userPWD, userName, age, displayName, userLoc, salt);
-                
             }   
 
         }
 
-        public List<SearchResult> wordToWordSearch(String wordSearch)
+        public int BookmarkPost(int postid, int userid, string annotation)
+        {
+            using(var db = new StackoverflowContext())
+            {
+               var databaseResponse = db.Database.ExecuteSqlCommand("select searchhistory({0},{1},{2})", postid, userid, annotation);
+                return databaseResponse;
+            }
+        }
+
+        public List<SearchResult> wordToWordSearch(string wordSearch)
         {
 
             String[] wordSplit = wordSearch.Split(' ');
@@ -147,7 +155,7 @@ namespace DomainModel
 
         }
 
-        public List<ExactMatchResult> ExactMatch(String wordSearch)
+        public List<ExactMatchResult> ExactMatch(string wordSearch)
         {
             String[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
@@ -157,6 +165,16 @@ namespace DomainModel
                 return result;
             }
 
+        }
+
+        public List<SearchResult> WeightedSearch(string wordSearch)
+        {
+            string[] wordSplit = wordSearch.Split(' ');
+            using (var db = new StackoverflowContext())
+            {
+                var result = db.SearchResults.FromSql("select * from weigthsearch({0})", wordSplit).ToList();
+                return result;
+            }
         }
        
     }

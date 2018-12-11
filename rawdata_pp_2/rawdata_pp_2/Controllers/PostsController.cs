@@ -25,17 +25,24 @@ namespace rawdata_pp_2.Controllers
             return View();
         }
 
-       [HttpGet("bestMatch/{searchString}")]
-        public IActionResult BestMatch(String searchString)
+       [HttpGet("bestMatch/{searchString}", Name = nameof(BestMatch))]
+        public IActionResult BestMatch(string searchString)
         {
             var results = _dataService.wordToWordSearch(searchString).Select(CreateSearchList);
             return Ok(results);
         }
 
-        [HttpGet ("exactMatch/{searchString}")]
-        public IActionResult ExactMatch(String searchString)
+        [HttpGet ("exactMatch/{searchString}", Name = nameof(ExactMatch))]
+        public IActionResult ExactMatch(string searchString)
         {
-            var results = _dataService.ExactMatch(searchString);
+            var results = _dataService.ExactMatch(searchString).Select(CreateExactSearchListModel); ;
+            return Ok(results);
+        }
+
+        [HttpGet ("weightedSearch/{searchString}", Name = nameof(WeightedSearch))]
+        public IActionResult WeightedSearch(string searchString)
+        {
+            var results = _dataService.WeightedSearch(searchString).Select(CreateSearchList);
             return Ok(results);
         }
 
@@ -58,7 +65,7 @@ namespace rawdata_pp_2.Controllers
             return Ok(post);
         }
 
-        [HttpGet(Name =nameof(GetPosts))]
+        [HttpGet(Name = nameof(GetPosts))]
         //[Authorize]
         public IActionResult GetPosts([FromQuery] Args args)
         {
@@ -103,6 +110,13 @@ namespace rawdata_pp_2.Controllers
         {
             var model = Mapper.Map<SearchResultListModel>(sr);
             model.URL = Url.Link(nameof(GetPost), new { id = sr.postid });
+            return model;
+        }
+
+        private ExactSearchResultListModel CreateExactSearchListModel(ExactMatchResult sr)
+        {
+            var model = Mapper.Map<ExactSearchResultListModel>(sr);
+            model.url = Url.Link(nameof(GetPost), new { id = sr.postid });
             return model;
         }
      
