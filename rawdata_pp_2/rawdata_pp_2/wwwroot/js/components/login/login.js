@@ -10,11 +10,16 @@
 
         };
 
+         var goToLogin = function() {
+            postman.publish("changeMenu", "login");
+        };
+
 
         return{
             login,
             username,
-            password
+            password,
+            goToLogin
 
         };
 
