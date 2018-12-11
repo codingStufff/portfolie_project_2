@@ -111,9 +111,9 @@ namespace rawdata_pp_2.Controllers
         }
 
         [HttpPost("bookmark", Name = nameof(CreateBookmark))]
-        public IActionResult CreateBookmark(int postid, int userid, string annotation)
+        public IActionResult CreateBookmark([FromBody]Bookmark bm)
         {
-           var result = _dataService.BookmarkPost(postid, userid, annotation);
+           var result = _dataService.BookmarkPost(bm.postid, bm.userid, bm.annotation);
             if (result == 0) return BadRequest("bookmark failed, try again");
             else return Ok("bookmark made");
         }

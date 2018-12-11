@@ -74,13 +74,18 @@ namespace DomainModel
 
             //mapping bookmark from the mark table from the database
             builder.Entity<Bookmark>().ToTable("mark");
+            //modelBuilder.Entity<VehicleFeature>().HasKey(vf => new { vf.VehicleId, vf.FeatureId });
+            builder.Entity<Bookmark>().HasKey(bm => new { bm.postid, bm.userid });
             builder.Entity<Bookmark>().Property(x => x.postid).HasColumnName("post_id");
             builder.Entity<Bookmark>().Property(x => x.userid).HasColumnName("user_id");
             builder.Entity<Bookmark>().Property(x => x.annotation).HasColumnName("annotation");
+            builder.Entity<Bookmark>().Property(x => x.markingdate).HasColumnName("markingdate");
+            
             //search results for bestmatch and weightsearch
             builder.Query<SearchResult>().Property(x => x.postid).HasColumnName("postid");
             builder.Query<SearchResult>().Property(x => x.rank).HasColumnName("rank");
             builder.Query<SearchResult>().Property(x => x.body).HasColumnName("body");
+           
 
             //search results for exactmatch
             builder.Query<ExactMatchResult>().Property(x => x.postid).HasColumnName("postid");

@@ -137,7 +137,7 @@ namespace DomainModel
         {
             using(var db = new StackoverflowContext())
             {
-               var databaseResponse = db.Database.ExecuteSqlCommand("select searchhistory({0},{1},{2})", postid, userid, annotation);
+               var databaseResponse = db.Database.ExecuteSqlCommand("select postmarking({0},{1},{2})", postid, userid, annotation);
                 return databaseResponse;
             }
         }
