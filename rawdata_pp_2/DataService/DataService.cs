@@ -88,7 +88,13 @@ namespace DomainModel
         public User GetUserByUsername (string FetchUser){
             using (var db = new StackoverflowContext())
             {
-                return db.user.FirstOrDefault(x => x.Username == FetchUser);
+                try
+                {
+                    return db.user.FirstOrDefault(x => x.Username == FetchUser);
+                }catch(Exception e)
+                {
+                    return null;
+                }
             }
         }
 
