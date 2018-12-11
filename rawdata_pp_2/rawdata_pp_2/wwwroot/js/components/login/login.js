@@ -1,4 +1,4 @@
-define(['knockout', /*'dataService',*/ 'postman'], function (ko, /*ds,*/ postman) {
+define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
     return function (params) 
     {
         var username = ko.observable();
