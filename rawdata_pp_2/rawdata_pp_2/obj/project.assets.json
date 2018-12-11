@@ -12413,11 +12413,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Devendra\\Desktop\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
       "projectName": "rawdata_pp_2",
       "projectPath": "C:\\Users\\Devendra\\Desktop\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
       "packagesPath": "C:\\Users\\Devendra\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Devendra\\Desktop\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "/Users/nikolaihjorth/Documents/RawDataGit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/rawdata_pp_2.csproj",
+      "projectName": "rawdata_pp_2",
+      "projectPath": "/Users/nikolaihjorth/Documents/RawDataGit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/rawdata_pp_2.csproj",
+      "packagesPath": "/Users/nikolaihjorth/.nuget/packages/",
+      "outputPath": "/Users/nikolaihjorth/Documents/RawDataGit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj",
+=======
+      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
+      "projectName": "rawdata_pp_2",
+      "projectPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\rawdata_pp_2.csproj",
+      "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\rawdata_pp_2\\obj\\",
+>>>>>>> 320e88cb9f71558c8a7373538e1618770a433729
+>>>>>>> f2771f542131f92ed5671abfdfe1a8964e97de46
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12436,8 +12452,18 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Devendra\\Desktop\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj": {
               "projectPath": "C:\\Users\\Devendra\\Desktop\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj"
+=======
+<<<<<<< HEAD
+            "/Users/nikolaihjorth/Documents/RawDataGit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj": {
+              "projectPath": "/Users/nikolaihjorth/Documents/RawDataGit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj"
+=======
+            "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj": {
+              "projectPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj"
+>>>>>>> 320e88cb9f71558c8a7373538e1618770a433729
+>>>>>>> f2771f542131f92ed5671abfdfe1a8964e97de46
             }
           }
         }

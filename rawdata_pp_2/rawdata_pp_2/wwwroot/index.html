@@ -14,23 +14,23 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
+            <ul class="navbar-nav mr-auto"data-bind="foreach: menuItems">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Posts</a>
+                    <a class="nav-link" href="#" data-bind="click: $parent.changeMenu"><span data-bind="text: name"></span></a>
                 </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0 box">
-                <input class="form-control mr-sm-2 align-items-center" type="text" placeholder="Search">
+                <input class="form-control mr-sm-2 align-items-center" type="text" placeholder="">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit"><span class="glyphicon glyphicon-search">Search</span></button>
             </form>
+
+
         </div>
     </nav>
-    <login></login>
-    <div><span data-bind="text: title"></span></div>
-    <div><span data-bind="currentView"> </span></div>
+
+    <div data-bind="component: { name: selectedComponent, params: currentParams}"></div>
+
     <script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
 </body>
 

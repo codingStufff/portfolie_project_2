@@ -48,7 +48,11 @@ namespace rawdata_pp_2.Controllers
             return Ok();
         }
         [HttpPost("login")]
+<<<<<<< HEAD
         public IActionResult UserLogin([FromBody] UserLoginModel model)
+=======
+        public IActionResult UserLogin([FromBody]UserLoginModel model)
+>>>>>>> f2771f542131f92ed5671abfdfe1a8964e97de46
         {
             // this needs to be in the configuration file!! hidden safely away
 
@@ -104,9 +108,18 @@ namespace rawdata_pp_2.Controllers
             var response = new
             {
                 model.UserName,
+                tempUser.Id,
                 token
             };
             return Ok(response);
+        }
+
+        [HttpPost("bookmark", Name = nameof(CreateBookmark))]
+        public IActionResult CreateBookmark(int postid, int userid, string annotation)
+        {
+           var result = _dataService.BookmarkPost(postid, userid, annotation);
+            if (result == 0) return BadRequest("bookmark failed, try again");
+            else return Ok("bookmark made");
         }
     }
 }

@@ -75,6 +75,10 @@ namespace rawdata_pp_2
                 cfg.CreateMap<Post, PostModel>();
                 cfg.CreateMap<Post, PostListModel>()
                     .ForMember(x => x.Comment, opt => opt.MapFrom(src => src.Comment.Id));
+
+                cfg.CreateMap<SearchResult, SearchResultListModel>();
+
+                cfg.CreateMap<ExactMatchResult, ExactSearchResultListModel>();
             });
         }
     }

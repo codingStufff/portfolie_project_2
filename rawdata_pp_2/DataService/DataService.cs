@@ -135,30 +135,50 @@ namespace DomainModel
             using (var db = new StackoverflowContext())
             {
                 db.Database.ExecuteSqlCommand("select createusers({0},{1},{2},{3},{4},{5})", userPWD, userName, age, displayName, userLoc, salt);
-                
             }   
 
         }
 
-        public List<SearchResult> wordToWordSearch(String wordSearch)
+        public int BookmarkPost(int postid, int userid, string annotation)
+        {
+            using(var db = new StackoverflowContext())
+            {
+               var databaseResponse = db.Database.ExecuteSqlCommand("select searchhistory({0},{1},{2})", postid, userid, annotation);
+                return databaseResponse;
+            }
+        }
+
+        public List<SearchResult> wordToWordSearch(string wordSearch)
         {
 
             String[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
+            { 
+                var result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit).ToList();
+
+                return result;
+            }
+
+        }
+
+        public List<ExactMatchResult> ExactMatch(string wordSearch)
+        {
+            String[] wordSplit = wordSearch.Split(' ');
+            using (var db = new StackoverflowContext())
             {
+                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({0})", wordSplit).ToList();
 
-               // var result in SearchResult.FromSql("select * from search({0})", "al");
-                var result = db.SearchResults.FromSql("select * from bestmatchsearch({0},{1},{2})", wordSplit[0], wordSplit[1],wordSplit[2]).ToList();
+                return result;
+            }
 
-                
-                /*
-                NpgsqlCommand reader = new NpgsqlCommand("select word from wi"); //db.Database.ExecuteSqlCommand("select wordtoword({0})",searchString );
-                NpgsqlDataReader result = reader.ExecuteReader();
-                while (result.Read())
-                {
-                    Console.Write("{0}\t",result[0]);
-                }
-                */
+        }
+
+        public List<SearchResult> WeightedSearch(string wordSearch)
+        {
+            string[] wordSplit = wordSearch.Split(' ');
+            using (var db = new StackoverflowContext())
+            {
+                var result = db.SearchResults.FromSql("select * from weigthsearch({0})", wordSplit).ToList();
                 return result;
             }
         }
