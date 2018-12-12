@@ -1,11 +1,39 @@
 ﻿<div>
     <div>
-        <button data-bind="click: test"></button>
-        <div data-bind="foreach: searchResults">
+        <input type="text" data-bind="value: searchWeightString" />
+        <button data-bind="click: weight">weight test</button>
+        <!--<div data-bind="foreach: searchResults">
+
             <div data-bind="text: url"></div>
             <div data-bind="html: body"></div>
+        </div>-->
 
-        </div>
-        
     </div>
+
+    <div>
+        <input type="text" data-bind="value: searchBestString" />
+        <button data-bind="click: best">best test</button>
+        <!--<div data-bind="foreach: searchResults">
+
+            <div data-bind="text: url"></div>
+            <div data-bind="html: body"></div>
+        </div>-->
+
+    </div>
+
+    <div>
+        <input type="text" data-bind="value: searchExactString" />
+        <button data-bind="click: exact">exact test</button>
+        <!--<div data-bind="foreach: searchResults">
+
+            <div data-bind="text: url"></div>
+            <div data-bind="html: body"></div>
+        </div>-->
+
+    </div>
+    <div data-bind="foreach: searchResults">
+
+            <div data-bind="text: url"></div>
+            <div data-bind="html: body"></div>
+        </div>
 </div>

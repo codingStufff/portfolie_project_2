@@ -13,14 +13,27 @@
             error: errorCallback
         });
     };
-    var getSearch = function (callback) {
-        $.getJSON("api/posts/weightedSearch/java brian", function (data) {
+    var getWeightSearch = function (query, callback) {
+        $.getJSON("api/posts/weightedSearch/" + query, function (data) {
+            callback(data);
+        });
+    }
+    var getExactMatch = function (query, callback) {
+        $.getJSON("api/posts/exactMatch/java brian" + query, function (data) {
+            callback(data);
+        });
+    }
+    var getBestMatch = function (query, callback) {
+        $.getJSON("api/posts/bestMatch/java brian block" + query, function (data) {
             callback(data);
         });
     }
 
+
     return {
         sendLoginCredentials,
-        getSearch
+        getWeightSearch,
+        getExactMatch,
+        getBestMatch
     };
 });
