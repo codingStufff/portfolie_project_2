@@ -3,14 +3,22 @@
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: 'ffsfs'});
     //var loginView = ko.observable("login");
-
-
-
-    var menuItems = [
-        { name: 'Home', component: 'home' },
-        { name: 'Login', component: 'login' },
-        { name: 'SearchResults', component: 'searchResults'}
+    var loggedIn = true;
+    if (loggedIn === false) {
+        var menuItems = [
+            { name: 'Home', component: 'home' },
+            { name: 'Login', component: 'login' },
         ];
+    }
+    else {
+        var menuItems = [
+            { name: 'Home', component: 'home' },
+            { name: 'Logout', component: 'logout' },
+            { name: 'Saved Posts', component: 'savedPosts' },
+            { name: 'Search History', component: 'search history' },
+            { name: 'SearchResults', component: 'searchResults' }
+        ];
+    }
 
     var selectedMenu = ko.observable(menuItems[0]);
     var selectedComponent = ko.observable("searchResults");
