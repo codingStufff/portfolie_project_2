@@ -43,6 +43,7 @@ namespace rawdata_pp_2.Controllers
         public IActionResult WeightedSearch(string searchString)
         {
             var results = _dataService.WeightedSearch(searchString).Select(CreateSearchList);
+            
             return Ok(results);
         }
 

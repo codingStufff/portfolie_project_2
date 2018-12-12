@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\js\components\" />
     <Folder Include="wwwroot\js\components\Home\" />
   </ItemGroup>
 

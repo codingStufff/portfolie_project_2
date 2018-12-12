@@ -1,5 +1,5 @@
 ﻿define(['jquery'], function ($) {
-    var sendLoginCredentials = function (loginData, callback, errorCallback) {
+     var sendLoginCredentials = function (loginData, callback, errorCallback) {
         $.ajax({
             method: "POST",
             url: "api/users/login",
@@ -13,8 +13,14 @@
             error: errorCallback
         });
     };
+    var getSearch = function (callback) {
+        $.getJSON("api/posts/weightedSearch/java brian", function (data) {
+            callback(data);
+        });
+    }
 
     return {
-        sendLoginCredentials
+        sendLoginCredentials,
+        getSearch
     };
 });

@@ -91,7 +91,7 @@ namespace DomainModel
                 try
                 {
                     return db.user.FirstOrDefault(x => x.Username == FetchUser);
-                }catch(Exception e)
+                }catch(Exception)
                 {
                     return null;
                 }

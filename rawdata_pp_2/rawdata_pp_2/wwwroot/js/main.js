@@ -28,6 +28,11 @@ require(['knockout'], function (ko){
         viewModel: {require: 'components/Home/home'},
         template: {require: 'text!components/Home/home.html'}
     });
+
+    ko.components.register("searchResults", {
+        viewModel: { require: 'components/searchresults/searchresults' },
+        template: { require: 'text!components/searchresults/searchresultsView.html'}
+    });
         
 });
 

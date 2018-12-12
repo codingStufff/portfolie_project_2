@@ -1,4 +1,4 @@
-﻿define(['knockout', 'postman'], function (ko, postman) {
+﻿define(['knockout', 'postman','dataService'], function (ko, postman, ds) {
    //var title = "Group11";
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: 'ffsfs'});
@@ -8,11 +8,12 @@
 
     var menuItems = [
         { name: 'Home', component: 'home' },
-        { name: 'Login', component: 'login' }
+        { name: 'Login', component: 'login' },
+        { name: 'SearchResults', component: 'searchResults'}
         ];
 
     var selectedMenu = ko.observable(menuItems[0]);
-    var selectedComponent = ko.observable("home");
+    var selectedComponent = ko.observable("searchResults");
 
     var changeMenu = function(menu) {
         selectedMenu(menu);
@@ -25,7 +26,9 @@
             return m.name === menuName;
         });
         if (menu) changeMenu(menu);
-    }) ;
+    });
+
+    
 
 
 
