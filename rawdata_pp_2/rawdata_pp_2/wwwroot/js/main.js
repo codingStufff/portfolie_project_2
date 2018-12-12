@@ -33,6 +33,11 @@ require(['knockout'], function (ko){
         viewModel: { require: 'components/searchresults/searchresults' },
         template: { require: 'text!components/searchresults/searchresultsView.html'}
     });
+
+    ko.components.register("post", {
+        viewModel: { require: 'components/Post/post' },
+        template: { require: 'text!components/Post/postView.html'}
+    })
         
 });
 

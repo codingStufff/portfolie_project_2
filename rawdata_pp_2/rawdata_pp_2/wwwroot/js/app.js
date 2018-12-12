@@ -1,7 +1,7 @@
 ﻿define(['knockout', 'postman','dataService'], function (ko, postman, ds) {
    //var title = "Group11";
    // var currentView = ko.observable("home");
-    var currentParams = ko.observable({ test: 'ffsfs'});
+    var currentParams = ko.observable({ test: ''});
     //var loginView = ko.observable("login");
     var loggedIn = true;
     if (loggedIn === false) {
@@ -34,6 +34,23 @@
             return m.name === menuName;
         });
         if (menu) changeMenu(menu);
+    });
+
+    postman.subscribe("showPost", function (data) {
+        
+        currentParams(data);
+        selectedComponent("post");
+       
+    });
+
+    postman.subscribe("search", function (data) {
+
+        currentParams(data);
+        var menu = menuItems.find(function (m) {
+            return m.name === "SearchResults";
+        });
+        if (menu) changeMenu(menu);
+
     });
 
     

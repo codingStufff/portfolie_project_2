@@ -19,21 +19,27 @@
         });
     }
     var getExactMatch = function (query, callback) {
-        $.getJSON("api/posts/exactMatch/java brian" + query, function (data) {
+        $.getJSON("api/posts/exactMatch/" + query, function (data) {
             callback(data);
         });
     }
     var getBestMatch = function (query, callback) {
-        $.getJSON("api/posts/bestMatch/java brian block" + query, function (data) {
+        $.getJSON("api/posts/bestMatch/" + query, function (data) {
             callback(data);
         });
     }
 
+    var getPost = function (query, callback) {
+        $.getJSON(query, function (data) {
+            callback(data);
+        });
+    } 
 
     return {
         sendLoginCredentials,
         getWeightSearch,
         getExactMatch,
-        getBestMatch
+        getBestMatch,
+        getPost
     };
 });
