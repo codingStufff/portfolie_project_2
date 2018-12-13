@@ -3,7 +3,7 @@
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: ''});
     //var loginView = ko.observable("login");
-    var loggedIn = true;
+    var loggedIn = false;
     if (loggedIn === false) {
         var menuItems = [
             { name: 'Home', component: 'home' },
@@ -21,7 +21,7 @@
     }
 
     var selectedMenu = ko.observable(menuItems[0]);
-    var selectedComponent = ko.observable("searchResults");
+    var selectedComponent = ko.observable("home");
 
     var changeMenu = function(menu) {
         selectedMenu(menu);
@@ -41,6 +41,10 @@
         currentParams(data);
         selectedComponent("post");
        
+    });
+
+    postman.subscribe("showRegister", function(){
+        selectedComponent("regUser");
     });
 
     postman.subscribe("search", function (data) {

@@ -26,7 +26,7 @@ namespace DomainModel
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("host=localhost;db=stackoverflow;uid=postgres;pwd=tsy78Bqp");
+            optionsBuilder.UseNpgsql("host=rawdata.ruc.dk;db=raw11;uid=raw11;pwd=a.iwA8IN");
 
         }
         protected override void OnModelCreating(ModelBuilder builder)
