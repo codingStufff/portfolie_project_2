@@ -2,25 +2,37 @@
     return function (params) 
     {
         var userName = ko.observable();
-        var regPassword = ko.observable();
+        var password = ko.observable();
         var age = ko.observable();
         var displayName = ko.observable();
         var location = ko.observable();
-
-
+        var errorMsg = ko.observable();
     
-var register = function(){
-};
+        var doRegistration = function () {
+            errorMsg("");
+            var registrationInfo = {
+                userPassword: password(), username: userName(), 
+                age: age(), displayName: displayName(), location: location()
+            }; 
+            ds.registerUser(
+                JSON.stringify(registrationInfo),
+                function (data) {
 
+                }, 
+                function () {
+                    errorMsg("User registration unsuccessful");
+                }
+            );
+        };
 
-         return {
+        return {
              userName,
-             regPassword,
+             password,
              age,
              displayName,
              location,
-             register
-            };
+            doRegistration, 
+             errorMsg
+        };
     };
-
 });

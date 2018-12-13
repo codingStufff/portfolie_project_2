@@ -9,7 +9,7 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
         var doLogin = function () {
             errorMsg("");
             var loginInfo = { "userName": username(), "userPassword": password() };
-            ds.sendLoginCredentials(
+            ds.loginUser(
                 JSON.stringify(loginInfo),
                 function (data) {
                     

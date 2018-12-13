@@ -1,10 +1,16 @@
 ﻿define(['jquery'], function ($) {
-     var sendLoginCredentials = function (loginData, callback, errorCallback) {
+    var loginUser = function (loginData) {
+        callServer("Post", "api/users/login", loginData);
+    };
+    var registerUser = function (registerData) {
+        callServer("Post", "api/users/register", registerData);
+    };
+    var callServer = function (httpMethod, url, dataSet, callback, errorCallback ) {
         $.ajax({
-            method: "POST",
-            url: "api/users/login",
-            data: loginData,
-            contentType:'application/json',
+            method: httpMethod,
+            url: url,
+            data: dataSet,
+            contentType: 'application/json',
             dataType: 'json',
             success: function (returnData) {
                 callback(returnData);
@@ -12,7 +18,7 @@
             },
             error: errorCallback
         });
-    };
+    }
     var getWeightSearch = function (query, callback) {
         $.getJSON("api/posts/weightedSearch/" + query, function (data) {
             callback(data);
@@ -36,10 +42,12 @@
     } 
 
     return {
-        sendLoginCredentials,
+        loginUser,
+        registerUser,
         getWeightSearch,
         getExactMatch,
         getBestMatch,
-        getPost
+        getPost,
+        callServer
     };
 });

@@ -10,7 +10,7 @@
                             Username
                             </div>
                             <div class="col-5">
-                            <input class="form-control"/>
+                            <input class="form-control" type="text" data-bind="textInput: userName"/>
                         </div>
                     </div>
 
@@ -19,7 +19,7 @@
                         Password 
                         </div>
                         <div class="col-5">
-                        <input class="form-control"/>
+                        <input class="form-control" type="password" data-bind="value: password"/>
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@
                         Display Name 
                         </div>
                         <div class="col-5">
-                        <input class="form-control"/>
+                        <input  class="form-control" type="text" data-bind="textInput: displayName"/>
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@
                         Age 
                         </div>
                         <div class="col-5">
-                        <input class="form-control"/>
+                        <input class="form-control" type="text" data-bind="textInput: age"/>
                         </div>
                     </div>
 
@@ -46,12 +46,12 @@
                             Location
                         </div>
                         <div class="col-5">
-                            <input class="form-control"/>
+                            <input class="form-control" type="text" data-bind="textInput: location"/>
                         </div>
                     </div>
                     <div class="row mt-1">
                         </div>
-                        <button data-bind="click: register">Register</button>
+                        <button data-bind="click: doRegistration">Register</button>
 
                     </form>
             </div>

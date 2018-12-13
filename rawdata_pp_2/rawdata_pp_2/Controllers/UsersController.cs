@@ -38,7 +38,7 @@ namespace rawdata_pp_2.Controllers
             return Ok(users);
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public IActionResult CreateUser(UserRegistrationModel model)
         {
             int.TryParse(_configuration["security:pwdsize"], out var size);
