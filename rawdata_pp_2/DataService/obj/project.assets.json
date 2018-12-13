@@ -3212,30 +3212,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sebastian\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/nikolaihjorth/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj",
+      "projectUniqueName": "/Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj",
       "projectName": "DomainModel",
-      "projectPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj",
-      "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\Semester Raw\\portfolie_project_2\\rawdata_pp_2\\DataService\\obj\\",
+      "projectPath": "/Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj",
+      "packagesPath": "/Users/nikolaihjorth/.nuget/packages/",
+      "outputPath": "/Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/DataService/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/nikolaihjorth/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
