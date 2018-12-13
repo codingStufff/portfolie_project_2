@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DomainModel.DataService;
+
 namespace DomainModel
 {
     public interface IDataService
@@ -16,9 +18,10 @@ namespace DomainModel
         Comment GetComment(int id);
         void createUser(string userPWD, string userName, int age, string displayName, string userLoc, string salt);
         User GetUserByUsername(string FetchUser);
-        List<SearchResult> wordToWordSearch(string wordSearch);
-        List<ExactMatchResult> ExactMatch(string wordSearch);
-        List<SearchResult> WeightedSearch(string wordSearch);
+        //List<SearchResult> wordToWordSearch(string wordSearch);
+        SearchResultObject/*List<SearchResult>*/ wordToWordSearch(string wordSearch, int page, int pageSize);
+        SearchResultObjectExact ExactMatch(string wordSearch, int page, int pageSize);
+        SearchResultObject WeightedSearch(string wordSearch, int page, int pageSize);
         int BookmarkPost(int postid, int userid, string annotation);
     }
 }
