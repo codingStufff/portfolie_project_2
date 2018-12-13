@@ -4,6 +4,7 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
         var username = ko.observable();
         var password = ko.observable();
         var errorMsg = ko.observable();
+        var goToReg = ko.observable();
 
         var doLogin = function () {
             errorMsg("");
@@ -24,6 +25,10 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
 
         };
 
+        var goToReg = function () {
+            postman.publish("showRegister")
+        }
+
         var goToLogin = function () {
             postman.publish("changeMenu", "login");
         };
@@ -33,7 +38,8 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
             username,
             password,
             errorMsg, 
-            goToLogin
+            goToLogin,
+            goToReg
         };
 
     };

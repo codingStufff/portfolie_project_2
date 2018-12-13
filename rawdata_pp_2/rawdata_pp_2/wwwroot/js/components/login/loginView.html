@@ -1,15 +1,33 @@
-<div>
-    <form>
-        <div data-bind="text:errorMsg"></div>
-        <div>
-            Username <input data-bind="textInput: username" type="text" id="userName" />
+<div align="center">
+    <div class="container">
+        <br>
+        <div class="row align-items-start">
+            <div class="col">
+
+            </div>
+            <br>
+            <div>
+                <form>
+                    <div data-bind="text:errorMsg"></div>
+                    <div>
+                        Username <input data-bind="textInput: username" type="text" id="userName" />
+                    </div>
+                    <br />
+                    <div>
+                        Password <input data-bind="value: password" type="password" id="password">
+                    </div>
+                    <br>
+                    <button data-bind="click: doLogin">Login</button>
+                    <br>
+                    <br>
+                    <button data-bind="click: goToReg" >Register</button>
+                </form>
+            </div>
+            <div class="col">
+
+            </div>
         </div>
-        <br />
-        <div>
-            Password <input data-bind="value: password" type="password" id="password">
-        </div>
-        <button  data-bind="click: doLogin">Login</button>
-    </form>
+    </div>
 </div>
-<!--good for debugging--> 
+<!--good for debugging-->
 <pre data-bind="text: ko.toJSON($data, null, 2)"></pre>

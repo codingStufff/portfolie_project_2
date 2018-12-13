@@ -37,6 +37,11 @@ require(['knockout'], function (ko){
     ko.components.register("post", {
         viewModel: { require: 'components/Post/post' },
         template: { require: 'text!components/Post/postView.html'}
+        });
+
+    ko.components.register("regUser", {
+        viewModel: {require: 'components/regUser/regUser'},
+        template: {require: 'text!components/regUser/regUser.html'}
     })
         
 });

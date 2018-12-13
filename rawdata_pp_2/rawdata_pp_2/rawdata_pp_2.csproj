@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\js\components\Home\" />
+    <Folder Include="wwwroot\js\components\regUser\" />
   </ItemGroup>
 
   <ItemGroup>
