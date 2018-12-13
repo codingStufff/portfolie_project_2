@@ -43,13 +43,12 @@ namespace DomainModel
             {
                 db.user.Add(new User
                 {
-                    Id = 1,
                     UserPassword = _userpassword,
                     Username = _userName,
                     Age = _age,
                     DisplayName = _displayName,
                     UserLocation = _userLocation,
-                    CreationDate = new DateTime().Date
+                    //CreationDate = new DateTime().Date
                 });
                 db.SaveChanges();
             }
