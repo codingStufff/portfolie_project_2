@@ -12625,11 +12625,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/rawdata_pp_2.csproj",
+      "projectUniqueName": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/rawdata_pp_2.csproj",
       "projectName": "rawdata_pp_2",
-      "projectPath": "/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/rawdata_pp_2.csproj",
+      "projectPath": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/rawdata_pp_2.csproj",
       "packagesPath": "/Users/nikolaihjorth/.nuget/packages/",
-      "outputPath": "/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj",
+      "outputPath": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -12646,8 +12646,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj": {
-              "projectPath": "/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj"
+            "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj": {
+              "projectPath": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj"
             }
           }
         }
