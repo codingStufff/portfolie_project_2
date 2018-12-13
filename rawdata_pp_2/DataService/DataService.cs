@@ -138,49 +138,83 @@ namespace DomainModel
 
         }
 
-        public int BookmarkPost(int postid, int userid, string annotation)
+        
+        public SearchResultObject/*List<SearchResult>*/ wordToWordSearch(string wordSearch, int page, int pageSize)
         {
-            using(var db = new StackoverflowContext())
-            {
-               var databaseResponse = db.Database.ExecuteSqlCommand("select postmarking({0},{1},{2})", postid, userid, annotation);
-                return databaseResponse;
-            }
-        }
-
-        public List<SearchResult> wordToWordSearch(string wordSearch)
-        {
-
-            String[] wordSplit = wordSearch.Split(' ');
+            string[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             { 
-                var result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit).ToList();
-
-                return result;
+                //List<SearchResult> result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit).ToList();
+                var result = db.SearchResults.FromSql("select * from bestmatch3({0},{1},{2})", wordSplit).AsQueryable();
+                
+                var count = result.Count();
+                var posts = result.Skip(page * pageSize)
+                    .Take(pageSize);
+                //return posts.ToList();
+                return new SearchResultObject(count, posts.ToList());
+                
             }
-
         }
 
-        public List<ExactMatchResult> ExactMatch(string wordSearch)
-        {
-            String[] wordSplit = wordSearch.Split(' ');
-            using (var db = new StackoverflowContext())
-            {
-                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({0})", wordSplit).ToList();
-
-                return result;
-            }
-
-        }
-
-        public List<SearchResult> WeightedSearch(string wordSearch)
+        public SearchResultObject WeightedSearch(string wordSearch, int page, int pageSize)
         {
             string[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             {
                 var result = db.SearchResults.FromSql("select * from weigthsearch({0})", wordSplit).ToList();
-                return result;
+                var count = result.Count();
+                var posts = result.Skip(page * pageSize)
+                    .Take(pageSize);
+                return new SearchResultObject(count, posts.ToList());
             }
         }
-       
+
+        public SearchResultObjectExact ExactMatch(string wordSearch, int page, int pageSize)
+        {
+            string[] wordSplit = wordSearch.Split(' ');
+            using (var db = new StackoverflowContext())
+            {
+                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({0})", wordSplit).ToList();
+
+                var count = result.Count();
+                var posts = result.Skip(page * pageSize)
+                    .Take(pageSize);
+                return new SearchResultObjectExact(count, posts.ToList());
+            }
+
+        }
+
+        public class SearchResultObjectExact
+        {
+            public int count;
+            public List<ExactMatchResult> list;
+            public SearchResultObjectExact(int count, List<ExactMatchResult> list)
+            {
+                this.count = count;
+                this.list = list;
+            }
+        }
+        
+        public class SearchResultObject
+        {
+            public int count;
+            public List<SearchResult> list;
+            public SearchResultObject(int count, List<SearchResult> list)
+            {
+                this.count = count;
+                this.list = list;
+            }
+
+        }
+
+        public int BookmarkPost(int postid, int userid, string annotation)
+        {
+            using (var db = new StackoverflowContext())
+            {
+                var databaseResponse = db.Database.ExecuteSqlCommand("select postmarking({0},{1},{2})", postid, userid, annotation);
+                return databaseResponse;
+            }
+        }
+
     }
 }

@@ -15,42 +15,42 @@
             switch (selectedSeacheType()) {
                 case "exact":
                     ds.getExactMatch(searcString(), function (data) {
-                        searchExactResults(data);
+                        searchExactResults(data.items);
                         console.log("exact");
                     });break;
 
                 case "best":
                     ds.getBestMatch(searcString(), function (data) {
-                        searchResults(data);
+                        searchResults(data.items);
                         console.log("best");
                     });
                         break;
 
                 case "weight":
                     ds.getWeightSearch(searcString(), function (data) {
-                        searchResults(data);
+                        searchResults(data.items);
                         console.log("weight");
                     });break;
             }
         }
-        var weight = function () {
-            ds.getWeightSearch(searcString(), function (data) {
-                searchResults(data);
-                console.log("weight");
-            });
-        }
-        var exact = function () {
-            ds.getExactMatch(searcString(), function (data) {
-                searchExactResults(data);
-                console.log("exact");
-            });
-        }
-        var best = function () {
-            ds.getBestMatch(searcString(), function (data) {
-                searchResults(data);
-                console.log("best");
-            });
-        }
+        //var weight = function () {
+        //    ds.getWeightSearch(searcString(), function (data) {
+        //        searchResults(data);
+        //        console.log("weight");
+        //    });
+        //}
+        //var exact = function () {
+        //    ds.getExactMatch(searcString(), function (data) {
+        //        searchExactResults(data);
+        //        console.log("exact");
+        //    });
+        //}
+        //var best = function () {
+        //    ds.getBestMatch(searcString(), function (data) {
+        //        searchResults(data);
+        //        console.log("best");
+        //    });
+        //}
 
         var navigateToPost = function (post) {
             postman.publish("showPost", { menu: "post", url: post.url, searchText: searcString(), searchType: selectedSeacheType() });

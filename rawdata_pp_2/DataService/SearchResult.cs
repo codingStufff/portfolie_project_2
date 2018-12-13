@@ -12,6 +12,5 @@ namespace DomainModel
         public int postid { get; set; }
         public double? rank { get; set; }
         public string body { get; set; }
-        //db.SearchResults.FromSql("select * from search({0})", "al")
     }
 }

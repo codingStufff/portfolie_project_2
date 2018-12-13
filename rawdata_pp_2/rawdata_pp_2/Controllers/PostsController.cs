@@ -26,25 +26,80 @@ namespace rawdata_pp_2.Controllers
         }
 
        [HttpGet("bestMatch/{searchString}", Name = nameof(BestMatch))]
-        public IActionResult BestMatch(string searchString)
+        public IActionResult BestMatch(string searchString, int page, int pageSize = 10 )
         {
-            var results = _dataService.wordToWordSearch(searchString).Select(CreateSearchList);
-            return Ok(results);
+            var resultObject = _dataService.wordToWordSearch(searchString, page, pageSize);//.list.Select(CreateSearchList);
+            var listOfPosts = resultObject.list.Select(CreateSearchList);
+
+
+
+            var numberOfItems = resultObject.count;//_dataService.GetNumberOfPosts();
+            var totalPages = CalculateTotalPages(pageSize, numberOfItems);
+
+            var result = new
+            {
+                NumberOfItems = numberOfItems,
+                NumberOfPages = totalPages,
+                First = CreateLink(page, pageSize),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
+                Last = CreateLink(totalPages - 1, pageSize),
+                Items = listOfPosts
+            };
+
+            return Ok(result);
+            //return Ok(results);
         }
 
         [HttpGet ("exactMatch/{searchString}", Name = nameof(ExactMatch))]
-        public IActionResult ExactMatch(string searchString)
+        public IActionResult ExactMatch(string searchString, int page, int pageSize = 10)
         {
-            var results = _dataService.ExactMatch(searchString).Select(CreateExactSearchListModel); ;
-            return Ok(results);
+            var resultObject = _dataService.ExactMatch(searchString, page, pageSize);//.Select(CreateExactSearchListModel);
+            var listOfPosts = resultObject.list.Select(CreateExactSearchListModel);
+
+
+
+            var numberOfItems = resultObject.count;//_dataService.GetNumberOfPosts();
+            var totalPages = CalculateTotalPages(pageSize, numberOfItems);
+
+            var result = new
+            {
+                NumberOfItems = numberOfItems,
+                NumberOfPages = totalPages,
+                First = CreateLink(page, pageSize),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
+                Last = CreateLink(totalPages - 1, pageSize),
+                Items = listOfPosts
+            };
+
+            return Ok(result);
         }
 
         [HttpGet ("weightedSearch/{searchString}", Name = nameof(WeightedSearch))]
-        public IActionResult WeightedSearch(string searchString)
+        public IActionResult WeightedSearch(string searchString, int page, int pageSize = 10)
         {
-            var results = _dataService.WeightedSearch(searchString).Select(CreateSearchList);
-            
-            return Ok(results);
+
+            var resultObject = _dataService.WeightedSearch(searchString, page, pageSize);//.Select(CreateSearchList);
+            var listOfPosts = resultObject.list.Select(CreateSearchList);
+
+
+
+            var numberOfItems = resultObject.count;//_dataService.GetNumberOfPosts();
+            var totalPages = CalculateTotalPages(pageSize, numberOfItems);
+
+            var result = new
+            {
+                NumberOfItems = numberOfItems,
+                NumberOfPages = totalPages,
+                First = CreateLink(page, pageSize),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
+                Last = CreateLink(totalPages - 1, pageSize),
+                Items = listOfPosts
+            };
+
+            return Ok(result);
         }
 
         [HttpGet("{id}", Name = nameof(GetPost))]
@@ -126,6 +181,7 @@ namespace rawdata_pp_2.Controllers
         {
             return (int)Math.Ceiling((double)numberOfItems / pageSize);
         }
+
         private string CreateLink(int page, int pageSize)
         {
             return Url.Link(nameof(GetPosts), new { page, pageSize });
@@ -141,4 +197,6 @@ namespace rawdata_pp_2.Controllers
             return page >= numberOfPages - 1 ? null : CreateLink(page = page + 1, pageSize);
         }
     }
+
+   
 }

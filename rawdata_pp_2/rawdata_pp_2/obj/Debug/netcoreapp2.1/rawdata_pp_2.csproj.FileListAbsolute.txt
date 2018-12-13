@@ -63,71 +63,88 @@ C:/Users/Devendra/Documents/rawdata/portfolie_project_2/rawdata_pp_2/rawdata_pp_
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CopyComplete
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.dll
 /Users/nikolaihjorth/Documents/RawdataGit/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.deps.json
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.json
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.dev.json
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.dll
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CoreCompileInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfoInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorTargetAssemblyInfo.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CopyComplete
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Working project portfolie 2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csprojAssemblyReference.cache
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.deps.json
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.json
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.dev.json
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.dll
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csprojAssemblyReference.cache
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CoreCompileInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cache
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfoInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorTargetAssemblyInfo.cache
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CopyComplete
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Sebastian\Documents\rawdataRepo\portfolie2\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.deps.json
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.json
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.dev.json
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.dll
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.pdb
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csprojAssemblyReference.cache
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CoreCompileInputs.cache
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cache
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cs
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfoInputs.cache
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfo.cs
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorTargetAssemblyInfo.cache
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CopyComplete
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Devendra\Desktop\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csprojAssemblyReference.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CoreCompileInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorAssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfoInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.AssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.deps.json
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.json
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.runtimeconfig.dev.json
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.dll
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\rawdata_pp_2.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.dll
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\bin\Debug\netcoreapp2.1\DomainModel.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.RazorTargetAssemblyInfo.cache
-C:\Users\Sebastian\Documents\rawdataRepo\Semester Raw\portfolie_project_2\rawdata_pp_2\rawdata_pp_2\obj\Debug\netcoreapp2.1\rawdata_pp_2.csproj.CopyComplete
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.deps.json
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.json
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.dev.json
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.dll
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CoreCompileInputs.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cs
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfoInputs.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfo.cs
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorTargetAssemblyInfo.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CopyComplete
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Working project portfolie 2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csprojAssemblyReference.cache
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.deps.json
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.json
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.dev.json
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.dll
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csprojAssemblyReference.cache
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CoreCompileInputs.cache
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cache
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cs
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfoInputs.cache
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfo.cs
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorTargetAssemblyInfo.cache
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CopyComplete
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Sebastian/Documents/rawdataRepo/portfolie2/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.deps.json
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.json
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.dev.json
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.dll
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.pdb
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csprojAssemblyReference.cache
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CoreCompileInputs.cache
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cache
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cs
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfoInputs.cache
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfo.cs
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorTargetAssemblyInfo.cache
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CopyComplete
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Devendra/Desktop/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csprojAssemblyReference.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CoreCompileInputs.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cs
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfoInputs.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfo.cs
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.deps.json
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.json
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.dev.json
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.dll
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.dll
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.pdb
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorTargetAssemblyInfo.cache
+C:/Users/Sebastian/Documents/rawdataRepo/Semester Raw/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CopyComplete
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.deps.json
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.json
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.runtimeconfig.dev.json
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.dll
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/rawdata_pp_2.pdb
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.dll
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/bin/Debug/netcoreapp2.1/DomainModel.pdb
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csprojAssemblyReference.cache
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CoreCompileInputs.cache
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cache
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorAssemblyInfo.cs
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfoInputs.cache
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.AssemblyInfo.cs
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.RazorTargetAssemblyInfo.cache
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.csproj.CopyComplete
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.dll
+/Users/nikolaihjorth/Documents/RawData-Git/portfolie_project_2/rawdata_pp_2/rawdata_pp_2/obj/Debug/netcoreapp2.1/rawdata_pp_2.pdb
