@@ -1,6 +1,8 @@
 ﻿define(['jquery'], function ($) {
     var loginUser = function (loginData) {
-        callServer("Post", "api/users/login", loginData);
+        callServer("Post", "api/users/login", loginData/*, function (data) {
+            callback(data);
+        }*/);
     };
     var registerUser = function (registerData) {
         callServer("Post", "api/users/register", registerData);
@@ -62,6 +64,6 @@
         getPost,
         callServer,
         getNextPage,
-        getPreviousPage
+
     };
 });

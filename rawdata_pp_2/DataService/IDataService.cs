@@ -23,5 +23,6 @@ namespace DomainModel
         SearchResultObjectExact ExactMatch(string wordSearch, int page, int pageSize);
         SearchResultObject WeightedSearch(string wordSearch, int page, int pageSize);
         int BookmarkPost(int postid, int userid, string annotation);
+        List<WordCloud> GetWordCloud(string wordSearch);
     }
 }

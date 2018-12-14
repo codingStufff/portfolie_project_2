@@ -216,5 +216,15 @@ namespace DomainModel
             }
         }
 
+        public List<WordCloud> GetWordCloud(string wordSearch)
+        {
+            using (var db = new StackoverflowContext())
+            {
+                var wordCloudResponse = db.WordCloudResults.FromSql("select * from co_ocsearch({0})", wordSearch).ToList();
+                return wordCloudResponse;
+
+            }
+        }
+
     }
 }

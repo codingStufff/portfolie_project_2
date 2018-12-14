@@ -22,6 +22,7 @@ namespace DomainModel
 
         public DbQuery<SearchResult> SearchResults { get; set; }
         public DbQuery<ExactMatchResult> ExactSearchResults { get; set; }
+        public DbQuery<WordCloud> WordCloudResults { get; set; }
         
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -86,10 +87,13 @@ namespace DomainModel
             builder.Query<SearchResult>().Property(x => x.rank).HasColumnName("rank");
             builder.Query<SearchResult>().Property(x => x.body).HasColumnName("body");
            
-
             //search results for exactmatch
             builder.Query<ExactMatchResult>().Property(x => x.postid).HasColumnName("postid");
             builder.Query<ExactMatchResult>().Property(x => x.body).HasColumnName("body");
+
+            // search results for word cloud
+            builder.Query<WordCloud>().Property(x => x.word).HasColumnName("word");
+            builder.Query<WordCloud>().Property(x => x.grade).HasColumnName("grade1");
         }
         public static readonly LoggerFactory MyLoggerFactory
         = new LoggerFactory(new[]

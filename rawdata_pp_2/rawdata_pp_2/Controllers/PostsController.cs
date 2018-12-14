@@ -122,6 +122,14 @@ namespace rawdata_pp_2.Controllers
             return Ok(post);
         }
 
+        [HttpGet("wordcloud/{searchString}")]
+        public IActionResult WordCloud(string searchString)
+        {
+            var response = _dataService.GetWordCloud(searchString);
+
+            return Ok(response);
+        }
+
        
         
 
