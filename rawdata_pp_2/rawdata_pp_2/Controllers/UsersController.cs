@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using rawdata_pp_2.Models;
 using rawdata_pp_2.Service;
+using System.Text.RegularExpressions;
 
 namespace rawdata_pp_2.Controllers
 {
@@ -111,9 +112,12 @@ namespace rawdata_pp_2.Controllers
         }
 
         [HttpPost("bookmark", Name = nameof(CreateBookmark))]
-        public IActionResult CreateBookmark([FromBody]Bookmark bm)
+        public IActionResult CreateBookmark(BookmarkModel bm)
         {
-           var result = _dataService.BookmarkPost(bm.postid, bm.userid, bm.annotation);
+            string[] findPostID = Regex.Split(bm.URL, @"\D+");
+            var postid = Int32.Parse(findPostID.Last());
+
+            var result = _dataService.BookmarkPost(postid, bm.userid, bm.annotation);
             if (result == 0) return BadRequest("bookmark failed, try again");
             else return Ok("bookmark made");
         }

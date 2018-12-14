@@ -161,7 +161,7 @@ namespace DomainModel
             string[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             {
-                var result = db.SearchResults.FromSql("select * from weigthsearch({0})", wordSplit).ToList();
+                var result = db.SearchResults.FromSql("select * from weigthsearch({0})", wordSplit).AsQueryable(); ;
                 var count = result.Count();
                 var posts = result.Skip(page * pageSize)
                     .Take(pageSize);
@@ -174,7 +174,7 @@ namespace DomainModel
             string[] wordSplit = wordSearch.Split(' ');
             using (var db = new StackoverflowContext())
             {
-                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({0})", wordSplit).ToList();
+                var result = db.ExactSearchResults.FromSql("select * from ExactMatch({0})", wordSplit).AsQueryable(); 
 
                 var count = result.Count();
                 var posts = result.Skip(page * pageSize)

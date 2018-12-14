@@ -3,16 +3,17 @@
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: ''});
     //var loginView = ko.observable("login");
-    var loggedIn = true;
+    var loggedIn = false;
     if (loggedIn === false) {
         var menuItems = [
-            { name: 'Home', component: 'home' },
+            //{ name: 'Home', component: 'home' },
             { name: 'Login', component: 'login' },
+            { name: 'Search', component: 'searchResults' }
         ];
     }
     else {
         var menuItems = [
-            { name: 'Home', component: 'home' },
+            //{ name: 'Home', component: 'home' },
             { name: 'Logout', component: 'logout' },
             { name: 'Saved Posts', component: 'savedPosts' },
             { name: 'Search History', component: 'search history' },
@@ -51,7 +52,7 @@
 
         currentParams(data);
         var menu = menuItems.find(function (m) {
-            return m.name === "SearchResults";
+            return m.name === "Search";
         });
         if (menu) changeMenu(menu);
 

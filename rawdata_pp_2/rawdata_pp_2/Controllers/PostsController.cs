@@ -8,6 +8,7 @@ using AutoMapper;
 using rawdata_pp_2.Models;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace rawdata_pp_2.Controllers
 {
 
@@ -30,7 +31,7 @@ namespace rawdata_pp_2.Controllers
         {
             var resultObject = _dataService.wordToWordSearch(searchString, page, pageSize);//.list.Select(CreateSearchList);
             var listOfPosts = resultObject.list.Select(CreateSearchList);
-
+            var searchType = "bestMatch/";
 
 
             var numberOfItems = resultObject.count;//_dataService.GetNumberOfPosts();
@@ -40,10 +41,10 @@ namespace rawdata_pp_2.Controllers
             {
                 NumberOfItems = numberOfItems,
                 NumberOfPages = totalPages,
-                First = CreateLink(page, pageSize),
-                PreviousPage = CreateLinkToPrevPage(page, pageSize),
-                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
-                Last = CreateLink(totalPages - 1, pageSize),
+                First = CreateLink(page, pageSize, searchType),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize, searchType),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages, searchType),
+                Last = CreateLink(totalPages - 1, pageSize, searchType),
                 Items = listOfPosts
             };
 
@@ -56,9 +57,9 @@ namespace rawdata_pp_2.Controllers
         {
             var resultObject = _dataService.ExactMatch(searchString, page, pageSize);//.Select(CreateExactSearchListModel);
             var listOfPosts = resultObject.list.Select(CreateExactSearchListModel);
+            string searchType = "exactMatch/";
 
-
-
+            
             var numberOfItems = resultObject.count;//_dataService.GetNumberOfPosts();
             var totalPages = CalculateTotalPages(pageSize, numberOfItems);
 
@@ -66,10 +67,10 @@ namespace rawdata_pp_2.Controllers
             {
                 NumberOfItems = numberOfItems,
                 NumberOfPages = totalPages,
-                First = CreateLink(page, pageSize),
-                PreviousPage = CreateLinkToPrevPage(page, pageSize),
-                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
-                Last = CreateLink(totalPages - 1, pageSize),
+                First = CreateLink(page, pageSize, searchType),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize, searchType),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages, searchType),
+                Last = CreateLink(totalPages - 1, pageSize, searchType),
                 Items = listOfPosts
             };
 
@@ -83,7 +84,7 @@ namespace rawdata_pp_2.Controllers
             var resultObject = _dataService.WeightedSearch(searchString, page, pageSize);//.Select(CreateSearchList);
             var listOfPosts = resultObject.list.Select(CreateSearchList);
 
-
+            var searchType = "weightedSearch/";
 
             var numberOfItems = resultObject.count;//_dataService.GetNumberOfPosts();
             var totalPages = CalculateTotalPages(pageSize, numberOfItems);
@@ -92,10 +93,10 @@ namespace rawdata_pp_2.Controllers
             {
                 NumberOfItems = numberOfItems,
                 NumberOfPages = totalPages,
-                First = CreateLink(page, pageSize),
-                PreviousPage = CreateLinkToPrevPage(page, pageSize),
-                NextPage = CreateLinkToNextPage(page, pageSize, totalPages),
-                Last = CreateLink(totalPages - 1, pageSize),
+                First = CreateLink(page, pageSize, searchType),
+                PreviousPage = CreateLinkToPrevPage(page, pageSize, searchType),
+                NextPage = CreateLinkToNextPage(page, pageSize, totalPages, searchType),
+                Last = CreateLink(totalPages - 1, pageSize, searchType),
                 Items = listOfPosts
             };
 
@@ -121,30 +122,33 @@ namespace rawdata_pp_2.Controllers
             return Ok(post);
         }
 
-        [HttpGet(Name = nameof(GetPosts))]
-        //[Authorize]
-        public IActionResult GetPosts([FromQuery] Args args)
-        {
-            var posts = _dataService.GetPosts(args)
-                    .Select(CreatePostList);
-            
-                var numberOfItems = _dataService.GetNumberOfPosts();
-                var totalPages = CalculateTotalPages(args.PageSize, numberOfItems);
-            
-                var result = new
-                {
-                    NumberOfItems = numberOfItems,
-                    NumberOfPages = totalPages,
-                    First = CreateLink(args.Page, args.PageSize),
-                    PreviousPage = CreateLinkToPrevPage(args.Page, args.PageSize),
-                    NextPage = CreateLinkToNextPage(args.Page, args.PageSize, totalPages),
-                    Last = CreateLink(totalPages - 1, args.PageSize),
-                    Items = posts
-                };
+       
+        
 
-                return Ok(result);
+        //[HttpGet(Name = nameof(GetPosts))]
+        //[Authorize]
+        //public IActionResult GetPosts([FromQuery] Args args)
+        //{
+        //    var posts = _dataService.GetPosts(args)
+        //            .Select(CreatePostList);
             
-        }
+        //        var numberOfItems = _dataService.GetNumberOfPosts();
+        //        var totalPages = CalculateTotalPages(args.PageSize, numberOfItems);
+            
+        //        var result = new
+        //        {
+        //            NumberOfItems = numberOfItems,
+        //            NumberOfPages = totalPages,
+        //            First = CreateLink(args.Page, args.PageSize),
+        //            PreviousPage = CreateLinkToPrevPage(args.Page, args.PageSize),
+        //            NextPage = CreateLinkToNextPage(args.Page, args.PageSize, totalPages),
+        //            Last = CreateLink(totalPages - 1, args.PageSize),
+        //            Items = posts
+        //        };
+
+        //        return Ok(result);
+            
+        //}
 
         // assist methods
 
@@ -179,24 +183,35 @@ namespace rawdata_pp_2.Controllers
 
         private static int CalculateTotalPages(int pageSize, int numberOfItems)
         {
+
             return (int)Math.Ceiling((double)numberOfItems / pageSize);
         }
 
-        private string CreateLink(int page, int pageSize)
+        private string CreateLink(int page, int pageSize, string searchType)
         {
-            return Url.Link(nameof(GetPosts), new { page, pageSize });
+            if(searchType == "exactMatch/")
+            {
+                return Url.Link(nameof(ExactMatch), new { page, pageSize });
+            }
+           else if (searchType== "bestMatch/")
+            {
+                return Url.Link(nameof(BestMatch), new { page, pageSize });
+            }
+            else if(searchType == "weightedSearch/")
+            {
+                return Url.Link(nameof(WeightedSearch), new { page, pageSize });
+            }
+            else return null;
         }
 
-        private string CreateLinkToPrevPage(int page, int pageSize)
+        private string CreateLinkToPrevPage(int page, int pageSize, string searchType)
         {
-            return page == 0 ? null : CreateLink(page - 1, pageSize);
+            return page == 0 ? null : CreateLink(page - 1, pageSize, searchType);
         }
 
-        private string CreateLinkToNextPage(int page, int pageSize, int numberOfPages)
+        private string CreateLinkToNextPage(int page, int pageSize, int numberOfPages, string searchType)
         {
-            return page >= numberOfPages - 1 ? null : CreateLink(page = page + 1, pageSize);
+            return page >= numberOfPages - 1 ? null : CreateLink(page = page + 1, pageSize, searchType);
         }
     }
-
-   
 }

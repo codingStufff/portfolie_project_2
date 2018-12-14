@@ -3212,28 +3212,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/nikolaihjorth/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Sebastian\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj",
+      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\13-12-2018\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj",
       "projectName": "DomainModel",
-      "projectPath": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/DataService/DomainModel.csproj",
-      "packagesPath": "/Users/nikolaihjorth/.nuget/packages/",
-      "outputPath": "/Users/nikolaihjorth/Documents/Rawdatagitgit/portfolie_project_2/rawdata_pp_2/DataService/obj",
+      "projectPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\13-12-2018\\portfolie_project_2\\rawdata_pp_2\\DataService\\DomainModel.csproj",
+      "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sebastian\\Documents\\rawdataRepo\\13-12-2018\\portfolie_project_2\\rawdata_pp_2\\DataService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/nikolaihjorth/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

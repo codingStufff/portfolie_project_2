@@ -10,5 +10,6 @@ namespace rawdata_pp_2.Models
         public string URL { get; set; }
         public int userid { get; set; }
         public string annotation { get; set; }
+        public DateTime markingDate { get; set; }
     }
 }

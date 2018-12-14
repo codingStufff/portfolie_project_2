@@ -35,6 +35,18 @@
         });
     }
 
+    var getNextPage = function (query, callback) {
+        $.getJSON(query, function (data) {
+            callback(data);
+        });
+    }
+
+    var getPreviousPage = function (query, callback) {
+        $.getJSON(query, function (data) {
+            callback(data);
+        });
+    }
+
     var getPost = function (query, callback) {
         $.getJSON(query, function (data) {
             callback(data);
@@ -48,6 +60,8 @@
         getExactMatch,
         getBestMatch,
         getPost,
-        callServer
+        callServer,
+        getNextPage,
+        getPreviousPage
     };
 });
