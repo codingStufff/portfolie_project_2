@@ -79,6 +79,7 @@ namespace rawdata_pp_2
                 cfg.CreateMap<SearchResult, SearchResultListModel>();
 
                 cfg.CreateMap<ExactMatchResult, ExactSearchResultListModel>();
+                cfg.CreateMap<Bookmark, BookmarkListModel>();
             });
         }
     }

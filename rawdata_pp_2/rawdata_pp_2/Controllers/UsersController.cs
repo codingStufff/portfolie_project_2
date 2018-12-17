@@ -111,15 +111,6 @@ namespace rawdata_pp_2.Controllers
             return Ok(response);
         }
 
-        [HttpPost("bookmark", Name = nameof(CreateBookmark))]
-        public IActionResult CreateBookmark(BookmarkModel bm)
-        {
-            string[] findPostID = Regex.Split(bm.URL, @"\D+");
-            var postid = Int32.Parse(findPostID.Last());
-
-            var result = _dataService.BookmarkPost(postid, bm.userid, bm.annotation);
-            if (result == 0) return BadRequest("bookmark failed, try again");
-            else return Ok("bookmark made");
-        }
+        
     }
 }

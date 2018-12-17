@@ -1,6 +1,12 @@
-﻿<div data-bind="with: post">
+﻿<div>
+    <button data-bind="click: back">BACK</button>
+</div>
+<div data-bind="with: post">
     <div data-bind="html: postText"></div>
 </div>
 <div>
-    <button data-bind="click: back" >BACK</button>
+    <button data-bind="click: makeBookmark">bookmark post</button>
+    <input type="text" data-bind="value: annotationText"  />
+    
 </div>
+

@@ -1,10 +1,15 @@
 ﻿define(['jquery'], function ($) {
+    // post functions
     var loginUser = function (loginData) {
         callServer("Post", "api/users/login", loginData);
     };
     var registerUser = function (registerData) {
         callServer("Post", "api/users/register", registerData);
     };
+    var createBookmark = function (bookmarkInfo) {
+        callServer("Post", "api/posts/bookmark", bookmarkInfo);
+    };
+    // creating the object to send to database
     var callServer = function (httpMethod, url, dataSet, callback, errorCallback ) {
         $.ajax({
             method: httpMethod,
@@ -18,7 +23,9 @@
             },
             error: errorCallback
         });
+       
     }
+    // get functions
     var getWeightSearch = function (query, callback) {
         $.getJSON("api/posts/weightedSearch/" + query, function (data) {
             callback(data);
@@ -59,6 +66,14 @@
         });
     }
 
+    var getBookmarks = function (query, callback) {
+        $.getJSON("api/posts/userbookmarks/" + query, function (data) {
+            callback(data);
+        });
+    }
+
+    
+
     return {
         loginUser,
         registerUser,
@@ -69,7 +84,9 @@
         callServer,
         getNextPage,
         getPreviousPage,
-        getCloud
+        getCloud,
+        createBookmark,
+        getBookmarks
 
     };
 });

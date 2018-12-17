@@ -24,5 +24,6 @@ namespace DomainModel
         SearchResultObject WeightedSearch(string wordSearch, int page, int pageSize);
         int BookmarkPost(int postid, int userid, string annotation);
         List<WordCloud> GetWordCloud(string wordSearch);
+        List<Bookmark> getBookmarks(int userid);
     }
 }

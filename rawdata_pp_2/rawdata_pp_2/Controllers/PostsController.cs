@@ -7,7 +7,7 @@ using DomainModel;
 using AutoMapper;
 using rawdata_pp_2.Models;
 using Microsoft.AspNetCore.Authorization;
-
+using System.Text.RegularExpressions;
 
 namespace rawdata_pp_2.Controllers
 {
@@ -130,8 +130,26 @@ namespace rawdata_pp_2.Controllers
             return Ok(response);
         }
 
-       
-        
+        [HttpGet("userbookmarks/{userid}")]
+        public IActionResult GetUserBookmarks(int userid)
+        {
+            var listOfBookmarks = _dataService.getBookmarks(userid).Select(CreateBookmarkListModel);
+            return Ok(listOfBookmarks);
+        }
+
+        [HttpPost("bookmark", Name = nameof(CreateBookmark))]
+        public IActionResult CreateBookmark(BookmarkModel bm)
+        {
+            string[] findPostID = Regex.Split(bm.URL, @"\D+");
+            var postid = Int32.Parse(findPostID.Last());
+
+            var result = _dataService.BookmarkPost(postid, bm.userid, bm.annotation);
+            if (result == 0) return BadRequest("bookmark failed, try again");
+            else return Ok("bookmark made");
+        }
+
+
+
 
         //[HttpGet(Name = nameof(GetPosts))]
         //[Authorize]
@@ -139,10 +157,10 @@ namespace rawdata_pp_2.Controllers
         //{
         //    var posts = _dataService.GetPosts(args)
         //            .Select(CreatePostList);
-            
+
         //        var numberOfItems = _dataService.GetNumberOfPosts();
         //        var totalPages = CalculateTotalPages(args.PageSize, numberOfItems);
-            
+
         //        var result = new
         //        {
         //            NumberOfItems = numberOfItems,
@@ -155,7 +173,7 @@ namespace rawdata_pp_2.Controllers
         //        };
 
         //        return Ok(result);
-            
+
         //}
 
         // assist methods
@@ -171,6 +189,13 @@ namespace rawdata_pp_2.Controllers
                 model.Comment = Url.Link(nameof(CommentsController.GetComment), id);
             }
             
+            return model;
+        }
+
+        private BookmarkListModel CreateBookmarkListModel(Bookmark bm)
+        {
+            var model = Mapper.Map<BookmarkListModel>(bm);
+            model.url = Url.Link(nameof(GetPost), new { id = bm.postid });
             return model;
         }
 

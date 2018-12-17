@@ -96,6 +96,10 @@ require(['knockout'], function (ko){
         viewModel: { require: 'components/cloud/cloud' },
         template: { require: 'text!components/cloud/cloudView.html' }
     })
+    ko.components.register("savedPosts", {
+        viewModel: { require: 'components/bookmarks/bookmark' },
+        template: { require: 'text!components/bookmarks/bookmarkView.html' }
+    })
         
 });
 

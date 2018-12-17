@@ -226,5 +226,13 @@ namespace DomainModel
             }
         }
 
+        public List<Bookmark> getBookmarks(int userid)
+        {
+            using (var db = new StackoverflowContext())
+            {
+                return db.bookmark.Where(x => x.userid == userid).ToList();
+            }
+        }
+
     }
 }
