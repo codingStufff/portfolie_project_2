@@ -1,9 +1,9 @@
 ﻿define(['jquery'], function ($) {
-    var loginUser = function (loginData) {
-        callServer("Post", "api/users/login", loginData);
+    var loginUser = function (loginData, callback, errorCallback) {
+        callServer("Post", "api/users/login", loginData, callback, errorCallback);
     };
-    var registerUser = function (registerData) {
-        callServer("Post", "api/users/register", registerData);
+    var registerUser = function (registerData, callback, errorCallback) {
+        callServer("Post", "api/users/register", registerData, callback, errorCallback);
     };
     var callServer = function (httpMethod, url, dataSet, callback, errorCallback ) {
         $.ajax({
