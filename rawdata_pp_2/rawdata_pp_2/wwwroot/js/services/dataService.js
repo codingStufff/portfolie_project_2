@@ -1,10 +1,10 @@
 ﻿define(['jquery'], function ($) {
-    // post functions
-    var loginUser = function (loginData) {
-        callServer("Post", "api/users/login", loginData);
+
+    var loginUser = function (loginData, callback, errorCallback) {
+        callServer("Post", "api/users/login", loginData, callback, errorCallback);
     };
-    var registerUser = function (registerData) {
-        callServer("Post", "api/users/register", registerData);
+    var registerUser = function (registerData, callback, errorCallback) {
+        callServer("Post", "api/users/register", registerData, callback, errorCallback);
     };
     var createBookmark = function (bookmarkInfo) {
         callServer("Post", "api/posts/bookmark", bookmarkInfo);

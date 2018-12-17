@@ -12,14 +12,16 @@
             errorMsg("");
             var registrationInfo = {
                 userPassword: password(), username: userName(), 
-                age: age(), displayName: displayName(), location: location()
+                age: age(), displayName: displayName(), userLocation: location()
             }; 
             ds.registerUser(
                 JSON.stringify(registrationInfo),
                 function (data) {
-
+                    console.log("Welocome " + data.displayName + "!");
+                    console.log("This is your personalized dashboard");
                 }, 
-                function () {
+                function (data) {
+                    console.log("User registration unsuccessful" + data.responseText);
                     errorMsg("User registration unsuccessful");
                 }
             );

@@ -45,8 +45,23 @@ namespace rawdata_pp_2.Controllers
             int.TryParse(_configuration["security:pwdsize"], out var size);
             var salt = PasswordService.GenerateSalt(size);
             var pwd = PasswordService.HashPassword(model.UserPassword, salt, size);
-            _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
-            return Ok();
+
+            var checkUser = _dataService.GetUserByUsername(model.UserName);
+            if(checkUser != null)
+            {
+                return Ok("User already exists");
+            }
+
+            if(checkUser == null)
+            {
+                _dataService.createUser(pwd, model.UserName, model.Age, model.DisplayName, model.UserLocation, salt);
+            }
+            var response = new
+            {
+                model.UserName, 
+                model.DisplayName
+            };
+            return Ok(response);
         }
         [HttpPost("login")]
         public IActionResult UserLogin([FromBody] UserLoginModel model)
