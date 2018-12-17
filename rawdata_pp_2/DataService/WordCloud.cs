@@ -7,6 +7,6 @@ namespace DomainModel
     public class WordCloud
     {
         public string word { get; set; }
-        public int grade { get; set; }
+        public double Weight { get; set; }
     }
 }

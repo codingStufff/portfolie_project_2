@@ -1,8 +1,6 @@
 ﻿define(['jquery'], function ($) {
     var loginUser = function (loginData) {
-        callServer("Post", "api/users/login", loginData/*, function (data) {
-            callback(data);
-        }*/);
+        callServer("Post", "api/users/login", loginData);
     };
     var registerUser = function (registerData) {
         callServer("Post", "api/users/register", registerData);
@@ -55,6 +53,12 @@
         });
     } 
 
+    var getCloud = function (query, callback) {
+        $.getJSON("api/posts/wordcloud/" + query, function (data) {
+            callback(data);
+        });
+    }
+
     return {
         loginUser,
         registerUser,
@@ -64,6 +68,8 @@
         getPost,
         callServer,
         getNextPage,
+        getPreviousPage,
+        getCloud
 
     };
 });

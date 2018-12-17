@@ -3,12 +3,13 @@
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: ''});
     //var loginView = ko.observable("login");
-    var loggedIn = false;
+    var loggedIn = true;
     if (loggedIn === false) {
         var menuItems = [
             //{ name: 'Home', component: 'home' },
             { name: 'Login', component: 'login' },
-            { name: 'Search', component: 'searchResults' }
+            { name: 'Search', component: 'searchResults' },
+            { name: 'cloud', component: 'cloud' }
         ];
     }
     else {
@@ -17,7 +18,9 @@
             { name: 'Logout', component: 'logout' },
             { name: 'Saved Posts', component: 'savedPosts' },
             { name: 'Search History', component: 'search history' },
-            { name: 'Search', component: 'searchResults' }
+            { name: 'Search', component: 'searchResults' },
+            { name: 'cloud', component: 'cloud' }
+            
         ];
     }
 

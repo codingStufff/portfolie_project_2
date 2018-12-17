@@ -93,7 +93,7 @@ namespace DomainModel
 
             // search results for word cloud
             builder.Query<WordCloud>().Property(x => x.word).HasColumnName("word");
-            builder.Query<WordCloud>().Property(x => x.grade).HasColumnName("grade1");
+            builder.Query<WordCloud>().Property(x => x.Weight).HasColumnName("grade1");
         }
         public static readonly LoggerFactory MyLoggerFactory
         = new LoggerFactory(new[]

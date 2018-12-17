@@ -1,0 +1,11 @@
+﻿<button data-bind="click: getWords">Word Cloud</button>
+
+<div>
+    <input type="text" data-bind="value: searchWord">
+</div>
+
+<div data-bind="cloud: { words: words, width: 600, height: 400 }"></div>
+
+<!--<div data-bind="foreach: words">
+    <div data-bind="text: word" ></div>
+</div>-->
