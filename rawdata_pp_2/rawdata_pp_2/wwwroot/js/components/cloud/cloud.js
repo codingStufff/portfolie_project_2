@@ -1,4 +1,4 @@
-﻿define(['knockout', 'dataService', 'postman', 'jqcloud'], function (ko, ds, postman) {
+﻿define(['jquery', 'knockout', 'dataService', 'postman', 'jqcloud'], function ($, ko, ds, postman) {
     return function (params) {
         //var words1 = ko.observableArray([]);
         var words = ko.observableArray([
@@ -12,13 +12,20 @@
         // we need to implement updates on the cloud, since
         // the data will first be available after the creation
         // of the cloud
-        ds.getCloud("java", function (data) {
-            words(data);
-        });
+
+        //ds.getCloud("java", function (data) {
+        //    words(data);
+        //});
 
         var getWords = function () {
             ds.getCloud(searchWord(), function (data) {
-                words(data);
+                words(data.map(function (e) {
+                    return {
+                        text: e.word,
+                        weight: e.weight
+                    }
+                }));
+               
             });
         }
 
