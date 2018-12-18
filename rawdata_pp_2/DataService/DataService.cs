@@ -158,10 +158,12 @@ namespace DomainModel
 
         public SearchResultObject WeightedSearch(string wordSearch, int page, int pageSize)
         {
-            string[] wordSplit = wordSearch.Split(' ');
+            
+            string test = wordSearch.Replace(" ","','" );
+            string test1 = "select * from weigthsearch('" + test + "')";
             using (var db = new StackoverflowContext())
             {
-                var result = db.SearchResults.FromSql("select * from weigthsearch({0})", wordSplit).AsQueryable(); ;
+                var result = db.SearchResults.FromSql(test1).AsQueryable(); 
                 var count = result.Count();
                 var posts = result.Skip(page * pageSize)
                     .Take(pageSize);
