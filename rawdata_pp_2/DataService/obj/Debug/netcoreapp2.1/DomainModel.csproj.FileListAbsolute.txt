@@ -111,15 +111,3 @@ C:/Users/Sebastian/Documents/rawdataRepo/13-12-2018/portfolie_project_2/rawdata_
 /Users/nikolaihjorth/Documents/RawDataGit2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.AssemblyInfo.cs
 /Users/nikolaihjorth/Documents/RawDataGit2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.dll
 /Users/nikolaihjorth/Documents/RawDataGit2/portfolie_project_2/rawdata_pp_2/DataService/obj/Debug/netcoreapp2.1/DomainModel.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\DomainModel.deps.json
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\DomainModel.dll
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\DomainModel.pdb
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.csprojAssemblyReference.cache
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.csproj.CoreCompileInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.AssemblyInfoInputs.cache
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.AssemblyInfo.cs
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.csproj.CopyComplete
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.dll
-C:\Users\Sebastian\Documents\rawdataRepo\13-12-2018\portfolie_project_2\rawdata_pp_2\DataService\obj\Debug\netcoreapp2.1\DomainModel.pdb

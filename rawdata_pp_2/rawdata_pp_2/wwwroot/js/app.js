@@ -3,7 +3,7 @@
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: ''});
     //var loginView = ko.observable("login");
-    var loggedIn = true;
+    var loggedIn = false;
     if (loggedIn === false) {
         var menuItems = [
             //{ name: 'Home', component: 'home' },
