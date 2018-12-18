@@ -1,12 +1,53 @@
-﻿<div>
-    <button data-bind="click: back">BACK</button>
+﻿<div align="center">
+    <div class="container-fluid">
+ <div class="col-12">
+
+   <form>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="mt-3">
+
+                            <div class="col-10">
+                            
+                                <div class="shadow-lg p-1 mb-5 bg-white rounded" data-bind="with: post">
+                                    <div  data-bind="html: postText"></div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+
+                    <div class="row justify-content-center align-items-center">
+                        <div class="mt-3">
+                            <div class="col-10 ">
+                                <div>
+                                    <button class="form-control shadow-lg p-1 mb-2 bg-white rounded" data-bind="click: makeBookmark">Bookmark Post</button>
+
+                                </div>
+                            </div>
+
+                            <input class="form-control shadow-lg p-2 mb-5 bg-white rounded" type="text" data-bind="value: annotationText" placeholder="Write annotation here..." \>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-right align-items-right">
+                        <div class="mt-1">
+                            <div>
+                                <button class="from-control shadow-lg p-1 mb-5 bg-white rounded" data-bind="click: back">BACK</button>
+                            </div>
+                            </div>
+                    </div>
+     </form>
+     </div>
+   </div>
 </div>
-<div data-bind="with: post">
-    <div data-bind="html: postText"></div>
-</div>
-<div>
-    <button data-bind="click: makeBookmark">bookmark post</button>
-    <input type="text" data-bind="value: annotationText"  />
-    
-</div>
+
+
+
+
+
+
+
+
+
 

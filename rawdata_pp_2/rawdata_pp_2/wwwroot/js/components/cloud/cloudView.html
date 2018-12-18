@@ -1,7 +1,7 @@
-﻿<button data-bind="click: getWords">Word Cloud</button>
+﻿<button class="shadow-lg p-1 mb-2 mt-2 ml-2 bg-white rounded" data-bind="click: getWords"> Generate Word Cloud</button>
 
 <div>
-    <input type="text" data-bind="value: searchWord">
+    <input class="shadow-lg p-1 mb-2 mt-2 ml-2 bg-white rounded" type="text" data-bind="value: searchWord">
 </div>
 
 <div data-bind="cloud: { words: words, width: 600, height: 400 }"></div>
