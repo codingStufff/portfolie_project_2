@@ -6,6 +6,7 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
         var errorMsg = ko.observable();
         var goToReg = ko.observable();
         var userInfo = ko.observable();
+        var loggedIn = ko.observable();
 
         var doLogin = function () {
             errorMsg("");
@@ -15,11 +16,14 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
             ds.loginUser(
                 JSON.stringify(loginInfo),
                 function (data) {
-                    userinfo(data);
+                    userInfo(data);
+
+                    postman.publish("work");
                 },
                 function () {
                     errorMsg("Wrong username or password");
                 });
+            
         }
 
         var login = function () 
@@ -37,13 +41,20 @@ define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
             postman.publish("changeMenu", "login");
         };
 
+        //var loginSucces = function () {
+        //    if (errorMsg != "Wrong username or password") {
+        //        postman.publish("loginSucces");
+        //    }
+        //}
+
         return {
             doLogin,
             username,
             password,
             errorMsg, 
             goToLogin,
-            goToReg
+            goToReg,
+            userInfo
         };
 
     };

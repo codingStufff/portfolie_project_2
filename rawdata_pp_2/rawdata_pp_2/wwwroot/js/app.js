@@ -3,7 +3,7 @@
    // var currentView = ko.observable("home");
     var currentParams = ko.observable({ test: ''});
     //var loginView = ko.observable("login");
-    var loggedIn = false;
+    var loggedIn = true;
     if (loggedIn === false) {
         var menuItems = [
             //{ name: 'Home', component: 'home' },
@@ -23,6 +23,8 @@
             
         ];
     }
+ 
+    
 
     var selectedMenu = ko.observable(menuItems[0]);
     var selectedComponent = ko.observable("home");
@@ -60,6 +62,20 @@
         if (menu) changeMenu(menu);
 
     });
+    //postman.subscribe("work", function () {
+    //    menuItems = [
+    //        //{ name: 'Home', component: 'home' },
+    //        { name: 'Logout', component: 'logout' },
+    //        { name: 'Saved Posts', component: 'savedPosts' },
+    //        { name: 'Search History', component: 'search history' },
+    //        { name: 'Search', component: 'searchResults' },
+    //        { name: 'cloud', component: 'cloud' }
+
+    //    ];
+    //    changeMenu(menuItems[1]);
+    //});
+
+    
 
     
 
@@ -69,7 +85,7 @@
       // title,
      // currentView,
       currentParams,
-      menuItems,
+        menuItems,
       changeMenu,
       selectedComponent
     };
