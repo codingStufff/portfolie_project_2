@@ -87,6 +87,5 @@
         getCloud,
         createBookmark,
         getBookmarks
-
     };
 });
