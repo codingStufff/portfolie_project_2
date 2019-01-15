@@ -9,6 +9,7 @@
     var createBookmark = function (bookmarkInfo) {
         callServer("Post", "api/posts/bookmark", bookmarkInfo);
     };
+
     // creating the object to send to database
     var callServer = function (httpMethod, url, dataSet, callback, errorCallback ) {
         $.ajax({
@@ -25,6 +26,7 @@
         });
        
     }
+
     // get functions
     var getWeightSearch = function (query, callback) {
         $.getJSON("api/posts/weightedSearch/" + query, function (data) {
