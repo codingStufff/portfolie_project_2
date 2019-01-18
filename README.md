@@ -1,2 +1,2 @@
-# portfolie_project_2
-second portfolie hand-in
+# portfolie_project
+Portfolio Project developed through RawData course - RUC
